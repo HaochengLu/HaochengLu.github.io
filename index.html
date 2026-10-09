@@ -66,7 +66,6 @@ canvas{image-rendering:pixelated;display:block}
 .hud > *{pointer-events:auto}
 .stat{display:flex;align-items:center;gap:14px;padding:8px 14px 8px 8px;text-decoration:none;color:var(--ink)}
 #face{width:48px;height:48px;background:var(--panel2);box-shadow:0 0 0 4px var(--edge)}
-.lvbox{display:flex;flex-direction:column;gap:6px}
 .lv{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;white-space:nowrap}
 .lv b{color:var(--acc)}
 .lv.max b{color:var(--g3)}
@@ -87,35 +86,15 @@ canvas{image-rendering:pixelated;display:block}
 .tgl{width:56px;height:56px;padding:0;justify-content:center}
 #tglc{width:24px;height:24px}
 
-/* toast */
-.toast{position:fixed;right:var(--g);top:112px;z-index:40;width:340px;padding:28px 20px 18px;pointer-events:none;opacity:0;visibility:hidden;transform:translateY(-12px)}
-.toast.show{opacity:1;visibility:visible;transform:none;transition:transform .24s steps(3),opacity .01s}
-.toast .tab{position:absolute;left:16px;top:-20px;padding:7px 12px 5px;font-family:var(--pix);font-size:16px;text-transform:uppercase;background:var(--g3);color:#211a30;
-  box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 -4px 0 0 var(--edge),0 4px 0 0 var(--edge),inset 0 4px 0 0 var(--g2)}
-.toast .evo{display:flex;align-items:flex-end;gap:12px}
-.toast .evo canvas{width:64px;height:96px}
-.toast .evo canvas.bigic{width:54px;height:54px;padding:5px;box-sizing:content-box;background:var(--panel2);box-shadow:0 0 0 4px var(--edge);align-self:center}
-.toast .nm{font-family:var(--pix);font-weight:700;font-size:24px;line-height:1.1;color:var(--acc)}
-.toast .arw{font-family:var(--pix);font-size:24px;color:var(--acc);align-self:center}
-.toast .info{display:flex;flex-direction:column;gap:2px;align-self:center;margin-left:4px}
-.toast .big{font-family:var(--pix);font-weight:700;font-size:32px;line-height:1.1;color:var(--acc)}
-.toast .small{font-family:var(--pix);font-size:16px;text-transform:uppercase;color:var(--ink2);line-height:1.2}
-.toast .ab{font-weight:500;font-size:16px;line-height:1.4;color:var(--ink2)}
-
 /* ---------- HERO ---------- */
 .hero{position:relative;height:100vh;height:100svh;min-height:640px;max-height:1040px;overflow:hidden;background:var(--sky)}
 #sky{position:absolute;left:0;bottom:0}
 .hcopy{position:relative;z-index:2;padding:calc(92px + 3vh) var(--g) 0;max-width:calc(980px + 2 * var(--g));margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
 .kicker{font-family:var(--pix);font-size:16px;text-transform:uppercase;margin:0 0 16px;color:var(--ink2);letter-spacing:.04em}
-h1{font-family:var(--pix);font-weight:700;font-size:104px;line-height:.92;margin:0;color:var(--ink);text-shadow:8px 8px 0 var(--cast);white-space:nowrap}
+h1{font-family:var(--pix);font-weight:700;font-size:120px;line-height:.92;margin:0;color:var(--ink);text-shadow:8px 8px 0 var(--cast);white-space:nowrap}
 h1 span{color:var(--acc)}
 .tag{font-size:36px;line-height:1.2;font-weight:700;letter-spacing:-.01em;max-width:none;margin:24px 0 10px;color:var(--ink)}
-.sub{font-size:20px;line-height:1.5;font-weight:500;max-width:56ch;margin:0 0 22px;color:var(--ink2)}
-.cv{margin:0 0 26px;padding:14px 22px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px;text-align:left;max-width:900px}
-.cv div{display:contents}
-.cv dt{font-family:var(--pix);font-size:16px;text-transform:uppercase;color:var(--acc2);font-weight:700;padding-top:2px}
-.cv dd{margin:0;font-size:17px;line-height:1.5;color:var(--ink)}
-.cv a{font-weight:600;color:var(--ink);text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
+.sub{font-size:20px;line-height:1.5;font-weight:500;max-width:56ch;margin:0 0 32px;color:var(--ink2)}
 .cta{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
 @keyframes bob{50%{transform:translateY(4px)}}
 
@@ -136,9 +115,6 @@ h2{font-family:var(--pix);font-weight:700;font-size:64px;line-height:1;margin:0 
   box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 4px 0 0 var(--edge),0 -4px 0 0 var(--edge),inset -4px -4px 0 0 var(--offe);
   display:grid;place-items:center;font-family:var(--pix);font-size:16px;color:var(--ink2)}
 .ch.lit .node{background:var(--g3);color:#211a30;box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 4px 0 0 var(--edge),0 -4px 0 0 var(--edge),inset 4px 4px 0 0 var(--g2),inset -4px -4px 0 0 var(--g4)}
-.ch.lit .node .n{display:none}
-.node .ck{display:none;width:16px;height:12px;background:#211a30;clip-path:polygon(0 50%,25% 50%,40% 75%,80% 0,100% 0,45% 100%,30% 100%)}
-.ch.lit .node .ck{display:block}
 .dio{grid-column:2;margin:0;padding:8px;line-height:0;background:var(--edge)}
 .dio canvas{background:var(--off)}
 .txt{grid-column:3}
@@ -146,13 +122,13 @@ h2{font-family:var(--pix);font-weight:700;font-size:64px;line-height:1;margin:0 
 .chip a{color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
 .ch h3{font-family:var(--pix);font-weight:700;font-size:40px;line-height:1.05;margin:0 0 16px}
 .ch .story{margin:0 0 24px;max-width:48ch}
-.rw{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0;font-size:16px}
-.rw .ic{width:27px;height:27px;padding:3px;box-sizing:content-box;background:var(--panel2);box-shadow:0 0 0 3px var(--edge)}
-.rw .lab{font-family:var(--pix);text-transform:uppercase;color:var(--ink2)}
-.rw b{font-weight:700}
-.state{font-family:var(--pix);font-size:16px;text-transform:uppercase;padding:4px 10px;color:var(--muted);box-shadow:0 0 0 3px var(--offe)}
-.ch.lit .state{color:#211a30;background:var(--g2);box-shadow:0 0 0 3px var(--edge)}
-.state .on{display:none}.ch.lit .state .on{display:inline}.ch.lit .state .off{display:none}
+.chip .when{color:var(--muted)}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
+.tags li{font-family:var(--pix);font-size:16px;text-transform:uppercase;padding:5px 10px 4px;color:var(--ink2);background:var(--panel);box-shadow:0 0 0 3px var(--offe)}
+.ch.lit .tags li{box-shadow:0 0 0 3px var(--edge)}
+.story a{color:var(--ink);font-weight:600;text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
+.wm{font-family:var(--pix);font-size:16px;font-weight:700;text-transform:uppercase;white-space:nowrap}
+.wm span{color:var(--acc)}
 
 /* ---------- WORK ---------- */
 #work{background:var(--bg2)}
@@ -193,7 +169,7 @@ h2{font-family:var(--pix);font-weight:700;font-size:64px;line-height:1;margin:0 
 footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:15px;color:#a7a2c8;background:#0d0c22;border-top:4px solid #05040f}
 
 @media (max-width:1180px){
-  h1{font-size:88px}
+  h1{font-size:96px}
   .ch{grid-template-columns:64px minmax(0,1fr);gap:28px 32px}
   .dio{grid-column:2;justify-self:start}
   .txt{grid-column:2}
@@ -207,28 +183,18 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
   .nav{display:none}
   .stat{gap:10px;padding:6px 10px 6px 6px}
   #face{width:40px;height:40px}
-  .abil{gap:6px;margin-left:0}
   .slot canvas{width:14px;height:14px}
   .tgl{width:48px;height:48px}
   #tglc{width:20px;height:20px}
-  .toast{left:16px;right:16px;top:auto;bottom:16px;width:auto;padding:24px 16px 14px}
-  .toast .evo canvas{width:48px;height:72px}
-  .toast .evo canvas.bigic{width:36px;height:36px}
-  .toast .nm{font-size:16px}
   .hero{min-height:680px}
   .hcopy{padding-top:96px}
   h1{font-size:64px;line-height:.95;text-shadow:4px 4px 0 var(--cast)}
   h1 span{display:block}
   .tag{font-size:26px;margin:20px 0 10px}
   .sub{font-size:17px;margin-bottom:20px}
-  .cv{padding:14px 16px;gap:6px 12px;margin-bottom:24px}
-  .cv dd{font-size:16px}
-  .cv{grid-template-columns:minmax(0,1fr);gap:2px}
-  .cv dd + dt{margin-top:10px}
-  .cv div{display:block}
-  .cv div + div{margin-top:10px}
-  .cta{gap:16px}
-  .cta .pbtn{padding:0 14px}
+  .cta{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:360px}
+  .cta .pbtn{padding:0 10px;justify-content:center}
+  .cta .pbtn.gold,.cta .pbtn:last-child{grid-column:1/-1}
   section.sec{padding:88px 16px}
   h2{font-size:40px}
   .lead{font-size:18px;margin-bottom:48px}
@@ -246,25 +212,21 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .slot.pop{animation:none}
-  .toast.show{transition:none}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#story">Skip to the story</a>
 <header class="hud">
-  <a class="stat px" href="#top" aria-label="Back to top">
+  <a class="stat px" href="#top" aria-label="Jason Lu, back to top">
     <canvas id="face" width="24" height="24" aria-hidden="true"></canvas>
-    <span class="lvbox"><span class="lv" id="lv">Abilities <b>0/4</b></span></span>
-    <span class="abil" id="abil" aria-hidden="true"></span>
-    <span class="vh" id="lvtxt">Abilities unlocked: none yet</span>
+    <span class="wm">Jason <span>Lu</span></span>
   </a>
   <div class="hr">
     <nav class="nav px" aria-label="Sections"><a href="#story">Story</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
     <button class="pbtn tgl" id="tgl" type="button" aria-label="Switch day / night"><canvas id="tglc" width="12" height="12" aria-hidden="true"></canvas></button>
   </div>
 </header>
-<div class="toast px" id="toast" role="status" aria-live="polite"></div>
 
 <main id="top">
 <section class="hero" aria-label="Introduction">
@@ -274,13 +236,10 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
     <h1>Jason <span>Lu</span></h1>
     <p class="tag">I build the systems that let AI improve AI.</p>
     <p class="sub">RL environments, evals and training infrastructure where frontier agents run AI research end to end.</p>
-    <dl class="cv px">
-      <div><dt>Now</dt><dd>Co-leading <a href="https://github.com/evolvent-ai/RSIGym">RSIGym</a> at <a href="https://evolvent.co/en">Evolvent AI</a> &middot; M.S. CS, Columbia</dd></div>
-      <div><dt>Before</dt><dd>Shipped a multiplayer team agent at <a href="https://intent.app/">Intent</a> ahead of the big labs &middot; scaled science-document parsing at <a href="https://www.dp.tech/en">DP Technology</a></dd></div>
-    </dl>
     <div class="cta">
       <a class="pbtn gold" href="#story">&#9654; Read the story</a>
       <a class="pbtn" href="#work">Selected work</a>
+      <a class="pbtn" href="https://github.com/HaochengLu">GitHub</a>
       <a class="pbtn" href="#contact">Contact</a>
     </div>
   </div>
@@ -288,48 +247,48 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
 
 <section class="sec" id="story" aria-labelledby="storyh">
   <div class="wrap">
-    <p class="eyebrow">Story mode</p>
-    <h2 id="storyh">The run so far</h2>
-    <p class="lead">Four stages, four different abilities, each one essential to the next. Read a stage and it lights up.</p>
+    <p class="eyebrow">The story</p>
+    <h2 id="storyh">Four chapters</h2>
+    <p class="lead">Teaching AI to read science, to live with people, to improve itself, and what comes next. Each scene comes to life as you scroll.</p>
     <ol class="run" id="run">
-      <li class="ch" data-ab="Read science" data-ad="Turn science into data models can learn from.">
-        <span class="node" aria-hidden="true"><span class="n">1</span><span class="ck"></span></span>
+      <li class="ch">
+        <span class="node" aria-hidden="true"><span class="n">1</span></span>
         <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
         <div class="txt">
-          <p class="chip">Stage 1 &middot; <a href="https://www.dp.tech/en">DP Technology</a></p>
+          <p class="chip">01 &middot; <a href="https://www.dp.tech/en">DP Technology</a> <span class="when">&middot; Mar 2025 &ndash; Feb 2026</span></p>
           <h3>Reading</h3>
-          <p class="story">My first quest was teaching machines to read science. On the Uni-Parser team at DP Technology I helped turn papers and patents, with their text, tables, formulas and molecules, into clean training data at the scale of whole scientific libraries. A wall of unreadable PDFs became something a model could study.</p>
-          <p class="rw"><canvas class="ic" width="9" height="9" aria-hidden="true"></canvas><span class="lab">Ability</span><b>Read science</b><span class="state"><span class="off">Read to unlock</span><span class="on">Unlocked</span></span></p>
+          <p class="story">My first chapter was teaching machines to read science. On the <a href="https://uni-parser.github.io/">Uni-Parser</a> team at DP Technology I worked on the inference system that turns papers and patents, with their text, tables, formulas and molecules, into clean training data for models, and on <a href="https://huggingface.co/UniParser/MolParser-Mobile">MolParser-Mobile</a>, a tiny model that reads molecule drawings.</p>
+          <ul class="tags"><li>Document AI</li><li>Inference at scale</li><li>Small, fast models</li></ul>
         </div>
       </li>
-      <li class="ch" data-ab="Ship to people" data-ad="Put agents into real teams, not demos.">
-        <span class="node" aria-hidden="true"><span class="n">2</span><span class="ck"></span></span>
+      <li class="ch">
+        <span class="node" aria-hidden="true"><span class="n">2</span></span>
         <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
         <div class="txt">
-          <p class="chip">Stage 2 &middot; <a href="https://intent.app/">Intent</a></p>
+          <p class="chip">02 &middot; <a href="https://intent.app/">Intent</a> <span class="when">&middot; Feb &ndash; Aug 2026</span></p>
           <h3>Living with people</h3>
-          <p class="story">Next I wanted AI to live with people, not just read about them. At Intent I built a team agent that lives in group chats: one shared teammate anyone can @, that remembers the group, uses tools, runs long tasks and follows up on its own. We shipped it to real teams before the big labs shipped theirs.</p>
-          <p class="rw"><canvas class="ic" width="9" height="9" aria-hidden="true"></canvas><span class="lab">Ability</span><b>Ship to people</b><span class="state"><span class="off">Read to unlock</span><span class="on">Unlocked</span></span></p>
+          <p class="story">Next I wanted AI to live with people, not just read about them. At Intent I built a team agent for group chats: one shared teammate that anyone in the group can @. It remembers the group, uses tools, runs long tasks in the background and follows up on its own, on a runtime built to recover from failures.</p>
+          <ul class="tags"><li>Multiplayer agents</li><li>Memory &amp; tools</li><li>Long-running tasks</li></ul>
         </div>
       </li>
-      <li class="ch" data-ab="Self-improve" data-ad="Build loops where agents improve AI.">
-        <span class="node" aria-hidden="true"><span class="n">3</span><span class="ck"></span></span>
+      <li class="ch">
+        <span class="node" aria-hidden="true"><span class="n">3</span></span>
         <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
         <div class="txt">
-          <p class="chip">Stage 3 &middot; <a href="https://evolvent.co/en">Evolvent AI</a></p>
+          <p class="chip">03 &middot; <a href="https://evolvent.co/en">Evolvent AI</a> <span class="when">&middot; May 2026 &ndash; now</span></p>
           <h3>Improving themselves</h3>
-          <p class="story">Then the bigger question: can agents improve AI itself? At Evolvent AI I co-lead RSIGym, the lab where frontier agents run AI research end to end. They synthesize data, train models, rewrite their own harnesses and get scored in sandboxes, round after round.</p>
-          <p class="rw"><canvas class="ic" width="9" height="9" aria-hidden="true"></canvas><span class="lab">Ability</span><b>Self-improve</b><span class="state"><span class="off">Read to unlock</span><span class="on">Unlocked</span></span></p>
+          <p class="story">Then the bigger question: can agents improve AI itself? At Evolvent AI I co-lead <a href="https://github.com/evolvent-ai/RSIGym">RSIGym</a>, an environment where frontier agents run AI research end to end. They synthesize data, train models, rewrite their own harnesses and are scored in sandboxed evals, round after round. I also co-designed RSI-Index, the score that tracks how far they get.</p>
+          <ul class="tags"><li>RL environments</li><li>Evals</li><li>Self-improving agents</li></ul>
         </div>
       </li>
-      <li class="ch" data-ab="Build the lab" data-ad="Research infrastructure for frontier AI.">
-        <span class="node" aria-hidden="true"><span class="n">4</span><span class="ck"></span></span>
+      <li class="ch">
+        <span class="node" aria-hidden="true"><span class="n">4</span></span>
         <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
         <div class="txt">
-          <p class="chip">Final stage &middot; Columbia &middot; New York</p>
+          <p class="chip">04 &middot; Columbia University <span class="when">&middot; New York</span></p>
           <h3>Now</h3>
-          <p class="story">Now I am in New York for an M.S. in Computer Science at Columbia, after a B.S. at NYU Shanghai. Next: building this at a frontier lab. The environments, evals and training systems that let AI agents improve AI systems.</p>
-          <p class="rw"><canvas class="ic" width="9" height="9" aria-hidden="true"></canvas><span class="lab">Ability</span><b>Build the lab</b><span class="state"><span class="off">Read to unlock</span><span class="on">Unlocked</span></span></p>
+          <p class="story">Now I am in New York for an M.S. in Computer Science at <a href="https://www.columbia.edu/">Columbia</a>, after a B.S. at <a href="https://shanghai.nyu.edu/">NYU Shanghai</a>. Next I want to build this at a frontier lab: the environments, evals and training systems that let AI agents improve AI systems.</p>
+          <ul class="tags"><li>Research infrastructure</li><li>RL for agents</li><li>Frontier labs next</li></ul>
         </div>
       </li>
     </ol>
@@ -340,7 +299,7 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
   <div class="wrap inv">
     <p class="eyebrow">Inventory</p>
     <h2 id="workh">Selected work</h2>
-    <p class="lead">Things collected along the way.</p>
+    <p class="lead">Papers, code and the projects behind the chapters.</p>
     <div class="grp">
       <h3><canvas class="cameo" data-cameo="robot" aria-hidden="true"></canvas>Evolvent AI &middot; recursive self-improvement</h3>
       <ul class="items">
@@ -733,9 +692,9 @@ function stage1(a,sc){const on=a>0;
   // scan beam from Jason's palm
   if(a>.04&&a<.72&&top<GY){const hx=34,hy=GY-24;const by=Math.round(lerp(top,GY-4,(Math.sin(tt*5)+1)/2));
     for(let x=hx;x<px0+44;x++){const yy=Math.round(lerp(hy,by,(x-hx)/Math.max(1,px0-hx)));R(ctx,x,x<px0?yy:by,1,1,(x+Math.floor(tt*30))%3?P.cy:P.cH)}R(ctx,px0-1,top-2,46,1,P.cH)}
-  const tier=a>=.85?1:0;let pose='idle',fi=idleFi();if(a>.02&&a<.74){pose='scan';fi=a<.07?0:a<.12?1:2}
+  const tier=0;let pose='idle',fi=idleFi();if(a>.02&&a<.74){pose='scan';fi=a<.07?0:a<.12?1:2}
   jason(24,tier,pose,fi,false,{expr:a>.02&&a<.74?'focus':a>=.85?'smile':''});
-  ring(24,GY-26,(a-.85)/.13)}
+}
 
 const NX=[96,120,144];
 function stage2(a,sc){const on=a>0;
@@ -770,10 +729,10 @@ function stage2(a,sc){const on=a>0;
   const jx=26;let bx=null,by=0;
   if(a>=.55&&a<.85){const u=sm((a-.55)/.3);bx=Math.round(lerp(150,jx-10,u));by=Math.round(lerp(10,GY-52,u)-Math.sin(u*Math.PI)*14)}
   else if(a>=.85){bx=jx-10;by=GY-52+(live?[0,-1,-1,0][Math.floor(tt*6)%4]:0)}
-  const tier=a>=.85?2:1;let pose='idle',fi=idleFi();if(a>.08&&a<.55){pose='phone';fi=a<.14?0:a<.24?1:2}
+  const tier=0;let pose='idle',fi=idleFi();if(a>.08&&a<.55){pose='phone';fi=a<.14?0:a<.24?1:2}
   jason(jx,tier,pose,fi,false,{expr:a>=.85?'smile':''});
   if(bx!==null)ctx.drawImage(BOTB[0],bx-5,by);
-  ring(jx,GY-26,(a-.85)/.13)}
+}
 
 function stage3(a,sc){const on=a>0,live=on&&!reduced;
   R(ctx,0,0,VW,GY,P.me);for(let x=12;x<VW;x+=24)R(ctx,x,0,1,GY,P.mE);R(ctx,0,30,VW,1,P.mE);R(ctx,0,31,VW,1,P.mH);
@@ -796,10 +755,10 @@ function stage3(a,sc){const on=a>0,live=on&&!reduced;
   list.filter(r=>r[1]<cy).forEach(rob);
   if(on&&a<.9&&live){for(let i=0;i<4;i++){const ph=(tt*3+i*.37)%1;if(ph<.3){const sx=cx-26+((i*23+Math.floor(tt*3)*13)%52),sy=cy-14-((i*7)%8);R(ctx,sx,sy,1,1,P.am);R(ctx,sx-1,sy+1,3,1,P.am);R(ctx,sx,sy+2,1,1,P.am)}}}
   list.filter(r=>r[1]>=cy).forEach(rob);
-  const jx=36,tier=a>=.85?3:2;let pose='idle',fi=idleFi();if(a>.04&&a<.42){pose='lever';fi=a<.14?0:a<.26?1:2}
+  const jx=36,tier=0;let pose='idle',fi=idleFi();if(a>.04&&a<.42){pose='lever';fi=a<.14?0:a<.26?1:2}
   jason(jx,tier,pose,fi,false,{expr:a>.04&&a<.42?'det':a>=.85?'proud':''});
   ctx.drawImage(BOTB[0],jx-15,GY-52+(live?[0,-1,-1,0][Math.floor(tt*6)%4]:0));
-  ring(jx,GY-26,(a-.85)/.13)}
+}
 
 function stage4(a,sc,dt){const on=a>0,live=on&&!reduced;
   bands(ctx,P.night?P.sky:P.sky4,0,GY,VW);
@@ -835,7 +794,7 @@ function stage4(a,sc,dt){const on=a>0,live=on&&!reduced;
   if(a>=.25&&!placed){const u=(a-.25)/.15;block(Math.round(lerp(jx-3,lx+LW/2-5,u)),Math.round(lerp(GY-52,GY-11,u)-Math.sin(u*Math.PI)*16))}
   if(placed&&nF===0)block(lx+LW/2-5,GY-11);
   castShadow(lx,LW,20);
-  const tier=done?4:3;let pose='idle',fi=idleFi(),dy=0;
+  const tier=0;let pose='idle',fi=idleFi(),dy=0;
   if(on&&a<.25){pose='carry';fi=live?Math.floor(tt*4)%2:0}
   else if(a>=.25&&a<.4){pose='jump';const u=(a-.25)/.15;fi=u<.2?0:u<.5?1:u<.8?2:3;dy=-Math.round(Math.sin(u*Math.PI)*8)}
   else if(done){pose='win';fi=live?Math.floor(tt*3)%3:0}
@@ -843,7 +802,7 @@ function stage4(a,sc,dt){const on=a>0,live=on&&!reduced;
   if(pose==='carry')block(jx-4,GY-50);
   const hb=live?[0,-1,-1,0][Math.floor(tt*6)%4]:0;
   if(done&&live){const an=tt*3;ctx.drawImage(BOT2B[0],jx-5+Math.round(Math.cos(an)*16),GY-62+Math.round(Math.sin(an)*5))}else ctx.drawImage(BOTB[0],jx-15,GY-52+hb);
-  ring(jx,GY-26,(a-.85)/.13);
+
   if(done&&live)fireworks(sc.fx,dt,12,150,8,34)}
 const STAGES=[stage1,stage2,stage3,stage4];
 
@@ -856,7 +815,7 @@ function monoize(id,fromX){const d=id.data,w=id.width,h=id.height,pal=(isNight()
 /* ================= STATE ================= */
 const D_=D,heroEl=D.querySelector('.hero'),hcv=$('sky'),hctx=hcv.getContext('2d');
 const SC=[...D.querySelectorAll('#run > li')].map((li,k)=>{const c=li.querySelector('.dio canvas');c.width=SW;c.height=SH;const b=D.createElement('canvas');b.width=SW;b.height=SH;const bx=b.getContext('2d',{willReadFrequently:true});bx.imageSmoothingEnabled=false;const x=c.getContext('2d');x.imageSmoothingEnabled=false;
-  return{k,li,fig:li.querySelector('.dio'),c,x,b,bx,lit:false,litAt:0,done:false,vis:false,dirty:true,fx:[],ab:li.dataset.ab,ad:li.dataset.ad}});
+  return{k,li,fig:li.querySelector('.dio'),c,x,b,bx,lit:false,litAt:0,done:false,vis:false,dirty:true,fx:[],}});
 const nDone=()=>SC.filter(s=>s.done).length;
 let heroVis=true,saveVis=false,HS=4,HVW=360,HVH=225,HGY=195,hsky=null,hcity=null,hstars=[],hclouds=[],hfx=[],phone=false;
 
@@ -904,8 +863,7 @@ function drawHero(dt){ctx=hctx;VW=HVW;VH=HVH;GY=HGY;const live=!reduced,W=VW,B=i
   const mx=Math.round(W*(phone?.86:.86)),my=Math.round((HB.cl[0]+HB.cl[1])/2)+(phone?0:4);disc(mx,my,phone?5:8,P.lum,P.lumR,P.night);
   for(const [x,y,w,s] of hclouds){const cx=((x+(live?tt*s*2:0))%(W+80))-40;cloud(cx,y,w,0)}
   ctx.drawImage(hcity,0,0);
-  if(nDone()>=4&&live){const g=GY;GY=hz;fireworks(hfx,dt,W*.08,W*.92,ttop-6,deck-14);GY=g}
-  // the East River
+    // the East River
   const wb=GY-9;R(ctx,0,hz,W,wb-hz,B.w);R(ctx,0,hz,W,1,B.wl);
   for(let y=hz+3,k=0;y<wb;y+=3,k++){const off=live?Math.floor(tt*(4+k%3*2)):0;for(let x=((k*17+off)%24)-24;x<W;x+=24)R(ctx,x,y,6+(k%3)*2,1,k%2?B.wl:B.wd)}
   if(P.night){const rr=rng(19);for(let i=0;i<70;i++){const x=rr()*W|0,len=2+(rr()*4|0),y=hz+2+(rr()*(wb-hz-4)|0);if(!live||(Math.floor(tt*3+i)%4))R(ctx,x+(live?Math.round(Math.sin(tt*2+i)):0),y,1,len,i%3?P.f4w:'#ffd36e')}}
@@ -930,9 +888,9 @@ function drawHero(dt){ctx=hctx;VW=HVW;VH=HVH;GY=HGY;const live=!reduced,W=VW,B=i
   for(const lx of phone?[Math.round(W*.1)]:[Math.round(W*.34),Math.round(W*.84)]){R(ctx,lx,GY-30,2,30,'#1f3a2e');R(ctx,lx-1,GY-2,4,2,'#1f3a2e');R(ctx,lx-2,GY-36,6,6,'#1f3a2e');R(ctx,lx-1,GY-35,4,4,P.night?'#ffe9a8':'#e7efe0');R(ctx,lx-1,GY-38,4,2,'#1f3a2e');R(ctx,lx,GY-40,2,2,'#1f3a2e');
     if(P.night){ctx.fillStyle='rgba(255,233,168,.10)';for(let j=0;j<28;j++){const w=6+j;ctx.fillRect(lx+1-w/2|0,GY-30+j,w,1)}}}
   // Jason, wearing whatever the reader has unlocked
-  const jx=Math.round(W*(phone?.62:.62)),n=nDone(),tier=Math.min(4,n);const pose=tier>=4?'win':'idle',fi=tier>=4?(live?Math.floor(tt*3)%3:0):idleFi();
-  jason(jx,tier,pose,fi,true,{expr:tier>=4?'proud':'smile'});
-  if(tier>=2){const hb=live?Math.round(Math.sin(tt*3)*1.5):0;ctx.drawImage((tier>=4?BOT2B:BOTB)[1],jx+10,GY-58+hb);if(tier>=3)for(let i=0;i<4;i++){const a2=(live?tt*2.4:0)+i/4*Math.PI*2;R(ctx,jx+15+Math.round(Math.cos(a2)*8),GY-53+hb+Math.round(Math.sin(a2)*3),1,1,tier>=4?'#ffd36e':P.cy)}}}
+  const jx=Math.round(W*(phone?.62:.62)),tier=0;
+  jason(jx,0,'idle',idleFi(),true,{expr:'smile'});
+  {const hb=live?Math.round(Math.sin(tt*3)*1.5):0;ctx.drawImage((tier>=4?BOT2B:BOTB)[1],jx+10,GY-58+hb);if(tier>=3)for(let i=0;i<4;i++){const a2=(live?tt*2.4:0)+i/4*Math.PI*2;R(ctx,jx+15+Math.round(Math.cos(a2)*8),GY-53+hb+Math.round(Math.sin(a2)*3),1,1,tier>=4?'#ffd36e':P.cy)}}}
 
 /* ================= SAVE POINT ================= */
 const sv=$('save'),svx=sv.getContext('2d');let SVS=4,SVW=120;
@@ -949,7 +907,7 @@ function saveScene(){const W=SVW,H=72,x=svx,live=!reduced,t=tt;x.imageSmoothingE
   x.fillStyle='#ffffff';x.fillRect(cx-2,33+cy,1,3);x.fillStyle='rgba(95,240,217,.25)';x.fillRect(cx-6,53,13,2);
   if(live)for(let i=0;i<4;i++){const ph=(t*.6+i/4)%1;x.fillStyle=i%2?'#ffd36e':'#d0fff7';x.fillRect(cx-6+i*4,48-Math.round(ph*20),1,1)}
   x.fillStyle='#05040f';x.fillRect(ox+30,44,18,10);x.fillStyle=N.wd;x.fillRect(ox+31,45,16,9);x.fillStyle=N.wH;x.fillRect(ox+31,45,16,1);x.fillStyle=N.wD;x.fillRect(ox+31,49,16,1);x.fillRect(ox+38,45,1,9);
-  const tier=Math.min(4,nDone());x.drawImage(jimg(tier,'sit',live?Math.floor(t*1.5)%2:0,false,{rim:''}),ox+24,5);
+  const tier=2;x.drawImage(jimg(0,'sit',live?Math.floor(t*1.5)%2:0,false,{rim:''}),ox+24,5);
   if(tier>=2)x.drawImage((tier>=4?BOT2B:BOTB)[0],ox+50,32+(live?Math.round(Math.sin(t*3)):0))}
 
 /* ================= SCENE RENDER ================= */
@@ -964,33 +922,15 @@ function renderScene(sc,now,dt){
   sc.dirty=false}
 
 /* ================= HUD / TOAST ================= */
-const lvEl=$('lv'),abEl=$('abil'),toastEl=$('toast');
 function drawFace(){const c=$('face'),x=c.getContext('2d');x.clearRect(0,0,24,24);x.fillStyle=isNight()?'#262a66':'#cfe6ec';x.fillRect(0,0,24,24);
-  const img=renderJason(Math.min(4,nDone()),'idle',0,{t:0,still:1,expr:'smile'});x.drawImage(img,4,3,24,24,0,0,24,24)}
-function hud(popK){const n=nDone();lvEl.innerHTML=n>=4?'Full <b>kit</b>':'Abilities <b>'+n+'/4</b>';lvEl.classList.toggle('max',n>=4);
-  $('lvtxt').textContent='Abilities unlocked: '+(SC.filter(s=>s.done).map(s=>s.ab).join(', ')||'none yet');
-  abEl.innerHTML='';ICB.forEach((ic,i)=>{const s=D.createElement('span');s.className='slot'+(SC[i].done?' on':'')+(i===popK&&!reduced?' pop':'');const c=D.createElement('canvas');c.width=9;c.height=9;c.getContext('2d').drawImage(ic,0,0);s.append(c);abEl.append(s)});
-  drawFace()}
-function stageIcons(){SC.forEach((sc,i)=>{const c=sc.li.querySelector('canvas.ic'),x=c.getContext('2d');x.clearRect(0,0,9,9);x.drawImage(ICB[i],0,0)})}
+  const img=renderJason(0,'idle',0,{t:0,still:1,expr:'smile'});x.drawImage(img,4,3,24,24,0,0,24,24)}
+function hud(){drawFace()}
 function drawCameos(){D.querySelectorAll('canvas.cameo').forEach(c=>{const k=c.dataset.cameo;const [w,h]=k==='reader'?[16,12]:[12,14];c.width=w;c.height=h;const x=c.getContext('2d');x.clearRect(0,0,w,h);
   if(k==='robot')x.drawImage(ROBB[2][0],0,0);if(k==='bot')x.drawImage(BOTB[0],1,2);
   if(k==='reader'){x.fillStyle='#0b0a14';x.fillRect(0,1,16,11);x.fillStyle='#aab5c5';x.fillRect(1,2,14,9);x.fillStyle='#1f3d3b';x.fillRect(6,3,8,5);x.fillStyle='#5ff0d9';x.fillRect(6,5,8,1);x.fillStyle='#fdf9ef';x.fillRect(1,3,4,3);x.fillStyle='#ffd36e';x.fillRect(2,9,2,1)}
   c.style.width=w*3+'px';c.style.height=h*3+'px'})}
 function toggleIcon(){const c=$('tglc'),x=c.getContext('2d');x.clearRect(0,0,12,12);x.drawImage(bake(isNight()?MOON:SUN,{o:isNight()?'#05040f':P.ink,y:isNight()?'#ffd36e':'#e9a12e'},0),0,0)}
-const TQ=[];let tBusy=false;
-function sprite(tier,pose){const c=D.createElement('canvas');c.width=32;c.height=48;c.getContext('2d').drawImage(renderJason(tier,pose,0,{t:0,still:1,expr:'smile',rim:tier>=4?'#8af2e2':''}),0,0);c.setAttribute('aria-hidden','true');return c}
-function nextToast(){const it=TQ.shift();if(!it){tBusy=false;return}tBusy=true;toastEl.innerHTML='';
-  const tab=D.createElement('div');tab.className='tab';tab.textContent=it.fin?'Full kit':'Ability unlocked';toastEl.append(tab);
-  const evo=D.createElement('div');evo.className='evo';
-  if(it.fin)evo.append(sprite(4,'win'));else{const ic=D.createElement('canvas');ic.width=9;ic.height=9;ic.className='bigic';ic.setAttribute('aria-hidden','true');ic.getContext('2d').drawImage(ICB[it.k],0,0);evo.append(ic)}
-  const info=D.createElement('div');info.className='info';
-  const nm=D.createElement('span');nm.className='nm';const ds=D.createElement('span');ds.className='ab';
-  if(it.fin){nm.textContent='All four abilities';ds.textContent='Read science, ship to people, self-improve, build the lab.'}else{nm.textContent=SC[it.k].ab;ds.textContent=SC[it.k].ad}
-  info.append(nm,ds);evo.append(info);toastEl.append(evo);
-  void toastEl.offsetWidth;toastEl.classList.add('show');
-  setTimeout(()=>{toastEl.classList.remove('show');setTimeout(nextToast,320)},it.fin?3800:2600)}
-function clearStage(sc){sc.done=true;sc.li.classList.add('lit');const n=nDone();hud(sc.k);
-  TQ.push({k:sc.k});if(n>=4)TQ.push({fin:true});if(!tBusy)nextToast();kick()}
+function clearStage(sc){sc.done=true;sc.li.classList.add('lit');kick()}
 function light(sc){if(sc.lit)return;sc.lit=true;sc.litAt=performance.now();if(reduced){clearStage(sc)}kick()}
 
 /* ================= LOOP ================= */
@@ -1005,7 +945,7 @@ function kick(){if(!raf)raf=requestAnimationFrame(loop)}
 function sizeScenes(){const w=innerWidth;for(const sc of SC){let S;
   if(w<=760)S=Math.floor((sc.fig.parentElement.clientWidth-8)/SW);else if(w<=1180)S=Math.floor(Math.min(640,sc.li.clientWidth-96-16)/SW);else S=3;
   S=clamp(S,1,4);sc.c.style.width=SW*S+'px';sc.c.style.height=SH*S+'px';sc.dirty=true}}
-function rebuild(){bakeAll();sizeHero();sizeSave();sizeScenes();hud();stageIcons();drawCameos();toggleIcon();kick()}
+function rebuild(){bakeAll();sizeHero();sizeSave();sizeScenes();hud();drawCameos();toggleIcon();kick()}
 
 /* ================= OBSERVERS & CONTROLS ================= */
 const io=new IntersectionObserver(es=>{for(const e of es){const sc=SC.find(s=>s.fig===e.target);sc.vis=e.isIntersecting;if(e.isIntersecting&&e.intersectionRatio>=.55)light(sc);if(e.isIntersecting)sc.dirty=true}kick()},{threshold:[0,.55,1]});
