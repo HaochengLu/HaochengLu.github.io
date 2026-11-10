@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Jason Lu (Haocheng Lu), research engineer in New York. I build the RL environments, evals and training systems that let AI agents improve AI systems.">
+<meta name="description" content="Jason Lu (Haocheng Lu), research engineer in New York. I build verified agentic data, RL environments and benchmarks (3D, game dev, AI research) and the systems that let AI agents improve AI.">
 <meta property="og:title" content="Jason Lu">
 <meta property="og:description" content="I build the systems that let AI improve AI.">
 <meta name="theme-color" content="#211a30">
@@ -244,7 +244,7 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
     <p class="kicker">Research engineer &middot; New York</p>
     <h1>Jason <span>Lu</span></h1>
     <p class="tag">I build the systems that let AI improve AI.</p>
-    <p class="sub">RL environments, evals and training infrastructure where frontier agents run AI research end to end.</p>
+    <p class="sub">Verified agentic data, RL environments and benchmarks (3D, game dev, AI research) where frontier agents learn, get judged, and run AI research end to end.</p>
     <div class="cta">
       <a class="pbtn gold" href="#story">&#9654; Read the story</a>
       <a class="pbtn res" href="Jason_Lu_Resume.pdf"><svg class="ico" viewBox="0 0 10 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#211a30" d="M1 0h6v1h1v1h1v10H1z"/><path fill="#fffaf0" d="M2 1h5v2h1v8H2z"/><path fill="#211a30" d="M3 4h4v1H3zm0 2h4v1H3zm0 2h3v1H3z"/></svg>Resume<span class="tagx">1 page</span></a>
@@ -259,7 +259,7 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
   <div class="wrap">
     <p class="eyebrow">The story</p>
     <h2 id="storyh">Four chapters</h2>
-    <p class="lead">Teaching AI to read science, to live with people, to improve itself, and what comes next. Each scene comes to life as you scroll.</p>
+    <p class="lead">Teaching AI to read science, to work with people, to improve itself, and what comes next. Each scene comes to life as you scroll.</p>
     <ol class="run" id="run">
       <li class="ch">
         <span class="node" aria-hidden="true"><span class="n">1</span></span>
@@ -276,9 +276,9 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
         <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
         <div class="txt">
           <p class="chip">02 &middot; <a href="https://intent.app/">Intent</a> <span class="when">&middot; Feb &ndash; Aug 2026</span></p>
-          <h3>Living with people</h3>
-          <p class="story">Next I wanted AI to live with people, not just read about them. At Intent I built a team agent for group chats: one shared teammate that anyone in the group can @. It remembers the group, uses tools, runs long tasks in the background and follows up on its own, on a runtime built to recover from failures.</p>
-          <ul class="tags"><li>Multiplayer agents</li><li>Memory &amp; tools</li><li>Long-running tasks</li></ul>
+          <h3>Working with people</h3>
+          <p class="story">Next I wanted AI to work with people and make real things for them. At Intent I built an agent that builds 3D worlds on its own: it composes the scene, lighting, materials and camera moves in Blender, checks its own renders and fixes them, and turns a product into a finished ad video that customers pay for. I also built a team agent for group chats, one shared teammate anyone can @, and the runtime that lets agents survive crashes on day-long tasks.</p>
+          <ul class="tags"><li>Agentic 3D</li><li>Multiplayer agents</li><li>Durable runtime</li></ul>
         </div>
       </li>
       <li class="ch">
@@ -286,9 +286,9 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
         <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
         <div class="txt">
           <p class="chip">03 &middot; <a href="https://evolvent.co/en">Evolvent AI</a> <span class="when">&middot; May 2026 &ndash; now</span></p>
-          <h3>Improving themselves</h3>
-          <p class="story">Then the bigger question: can agents improve AI itself? At Evolvent AI I co-lead <a href="https://github.com/evolvent-ai/RSIGym">RSIGym</a>, an environment where frontier agents run AI research end to end. They synthesize data, train models, rewrite their own harnesses and are scored in sandboxed evals, round after round. I also co-designed RSI-Index, the score that tracks how far they get.</p>
-          <ul class="tags"><li>RL environments</li><li>Evals</li><li>Self-improving agents</li></ul>
+          <h3>Worlds that can&rsquo;t be fooled</h3>
+          <p class="story">Then the bigger question: can agents improve AI itself? That starts with data and environments a model can&rsquo;t fool. At Evolvent AI I architected our agentic data engine: author agents build executable tasks, programs decide pass or fail, and reviewer agents hunt for reward hacking, shipping post-training data to ByteDance, Qwen and GLM. I built three environments that check what actually happens, not what looks right: a 3D asset-repair benchmark in Blender, an RL sandbox where agents rebuild playable levels from screenshots, and a GameDev benchmark where coding agents ship whole Godot games. Top AI companies bought all three. On top of that I co-lead <a href="https://github.com/evolvent-ai/RSIGym">RSIGym</a>, where frontier agents run AI research end to end, and work on <a href="https://github.com/evolvent-ai/RSIBench-Data">RSIBench-Data</a> and <a href="https://github.com/evolvent-ai/Godel-Forest">G&ouml;del Forest</a>.</p>
+          <ul class="tags"><li>Agentic data</li><li>RL environments &amp; evals</li><li>Self-improving agents</li></ul>
         </div>
       </li>
       <li class="ch">
@@ -297,7 +297,7 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
         <div class="txt">
           <p class="chip">04 &middot; Columbia University <span class="when">&middot; New York</span></p>
           <h3>Now</h3>
-          <p class="story">Now I am in New York for an M.S. in Computer Science at <a href="https://www.columbia.edu/">Columbia</a>, after a B.S. at <a href="https://shanghai.nyu.edu/">NYU Shanghai</a>. Next I want to build this at a frontier lab: the environments, evals and training systems that let AI agents improve AI systems.</p>
+          <p class="story">Now I am in New York for an M.S. in Computer Science at <a href="https://www.columbia.edu/">Columbia</a>, after a B.S. at <a href="https://shanghai.nyu.edu/">NYU Shanghai</a>. Next I want to build this at a frontier lab: the data, environments and evals that let AI agents improve AI systems.</p>
           <ul class="tags"><li>Research infrastructure</li><li>RL for agents</li><li>Frontier labs next</li></ul>
         </div>
       </li>
@@ -311,11 +311,23 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
     <h2 id="workh">Selected work</h2>
     <p class="lead">Papers, code and the projects behind the chapters.</p>
     <div class="grp">
-      <h3><canvas class="cameo" data-cameo="robot" aria-hidden="true"></canvas>Evolvent AI &middot; recursive self-improvement</h3>
+      <h3><canvas class="cameo" data-cameo="robot" aria-hidden="true"></canvas>Evolvent AI &middot; data, environments &amp; self-improvement</h3>
       <ul class="items">
+        <li class="it"><span class="n">Agentic Data Engine</span><span class="d">Verified post-training data for ByteDance, Qwen and GLM</span></li>
+        <li class="it"><span class="n">3D Asset-Repair Benchmark</span><span class="d">Agents fix broken meshes into game-ready assets in Blender</span><span class="v">Bought by 3 top AI companies</span></li>
+        <li class="it"><span class="n">3D Level RL Sandbox</span><span class="d">Rebuild a playable level from screenshots</span><span class="v">Bought by 3 top AI companies</span></li>
+        <li class="it"><span class="n">Agentic GameDev Benchmark</span><span class="d">Coding agents ship whole Godot games from a spec</span><span class="v">Bought by top AI companies</span></li>
         <li class="it"><span class="n">RSIGym</span><span class="d">Where agents run AI research end to end</span><span class="links"><a href="https://arxiv.org/abs/2610.10310">Paper</a><a href="https://github.com/evolvent-ai/RSIGym">Code</a></span></li>
         <li class="it"><span class="n">RSIBench-Data</span><span class="d">Agents as post-training data researchers</span><span class="links"><a href="https://arxiv.org/abs/2607.25886">Paper</a><a href="https://github.com/evolvent-ai/RSIBench-Data">Code</a></span></li>
         <li class="it"><span class="n">G&ouml;del Forest</span><span class="d">Co-evolving agents that share lessons</span><span class="links"><a href="https://arxiv.org/abs/2609.36675">Paper</a><a href="https://github.com/evolvent-ai/Godel-Forest">Code</a></span></li>
+      </ul>
+    </div>
+    <div class="grp">
+      <h3><canvas class="cameo" data-cameo="bot" aria-hidden="true"></canvas>Intent &middot; agent systems</h3>
+      <ul class="items">
+        <li class="it"><span class="n">Agentic 3D Ad Generation</span><span class="d">An agent builds the 3D scene and renders the ad video</span><span class="v">Commercialized</span></li>
+        <li class="it"><span class="n">Team Agent</span><span class="d">One shared teammate any group-chat member can @</span></li>
+        <li class="it"><span class="n">Durable Agent Runtime</span><span class="d">Crash-safe execution for day-long agent tasks</span></li>
       </ul>
     </div>
     <div class="grp">
@@ -328,10 +340,8 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
     <div class="grp">
       <h3><canvas class="cameo" data-cameo="bot" aria-hidden="true"></canvas>Research</h3>
       <ul class="items">
-        <li class="it"><span class="n">Continual-Learning SWE Benchmark</span><span class="d">Coding agents learning through curricula</span></li>
         <li class="it"><span class="n">CrashGym</span><span class="d">Do agents&rsquo; experiments improve crash interventions?</span><span class="v">NeurIPS 2026 Agenthon Workshop</span><span class="links"><a href="https://arxiv.org/abs/2610.29245">Paper</a></span></li>
         <li class="it"><span class="n">Hard-Negative DPO</span><span class="d">Verifier-guided preference pairs</span><span class="links"><a href="https://arxiv.org/abs/2512.19728">Paper</a></span></li>
-        <li class="it"><span class="n">ContextVC</span><span class="d">Version control for coding-agent memory</span><span class="links"><a href="https://github.com/HaochengLu/contextvc">Code</a></span></li>
       </ul>
     </div>
   </div>
