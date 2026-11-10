@@ -6,234 +6,341 @@
 <meta name="description" content="Jason Lu (Haocheng Lu), research engineer in New York. I build verified agentic data, RL environments and benchmarks (3D, game dev, AI research) and the systems that let AI agents improve AI.">
 <meta property="og:title" content="Jason Lu">
 <meta property="og:description" content="I build the systems that let AI improve AI.">
-<meta name="theme-color" content="#211a30">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%23211a30'/%3E%3Crect x='1' y='1' width='6' height='3' fill='%23e9a12e'/%3E%3Crect x='2' y='4' width='4' height='3' fill='%23f3eedf'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#15141f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%2315141f'/%3E%3Crect x='1' y='1' width='6' height='3' fill='%23c8431b'/%3E%3Crect x='2' y='4' width='4' height='3' fill='%23f3efe6'/%3E%3C/svg%3E">
 <title>Jason Lu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f4eedf; --bg2:#ebe3cf; --panel:#fffaf0; --panel2:#f3ead6; --ink:#211a30; --ink2:#3f3752; --muted:#6a6179;
-  --edge:#211a30; --hi:#ffffff; --lo:#d9ccb0; --cast:rgba(33,26,48,.18);
-  --acc:#b0421d; --acc2:#1d6f63; --sel:#ffd9a8; --sky:#bcdfe6;
-  --g1:#fff2c2; --g2:#ffd36e; --g3:#e9a12e; --g4:#9a5b12;
-  --off:#c9c3d3; --offe:#8f88a0; --rail:#d4c9b0;
-  --crd:#17142a; --crdi:#f3eedf;
-  --pix:"Silkscreen",ui-monospace,monospace; --txt:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --g:clamp(16px,4vw,56px);
+  --bg:#f3efe6; --bg2:#e9e4d8; --panel:#fbf9f4; --ink:#15141f; --ink2:#3d3b4f; --muted:#6b6880;
+  --line:rgba(21,20,31,.18); --line2:rgba(21,20,31,.09); --bga:rgba(243,239,230,.86);
+  --acc:#c8431b; --acc2:#0f7d6f; --gold:#c98a1e; --sel:#ffd9a8; --sky:#5ea9d9;
+  --btn:#15141f; --btnt:#f6f2ea; --pgc:#ffd36e; --cast:rgba(21,20,31,.14);
+  --inkbg:#0e0d1a; --inkfg:#ece8de; --inkmu:#a9a4bf; --inkline:rgba(236,232,222,.15); --inkacc:#ff9466; --inkcy:#5ff0d9; --inkgold:#ffd36e;
+  --pix:"Silkscreen",ui-monospace,monospace; --txt:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --ser:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --g:clamp(20px,5vw,72px);
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0d0c22; --bg2:#121233; --panel:#17173a; --panel2:#1e1f4a; --ink:#f3eedf; --ink2:#d3cce6; --muted:#a7a2c8;
-  --edge:#05040f; --hi:#34366e; --lo:#0b0a1e; --cast:rgba(0,0,0,.45);
-  --acc:#ff9466; --acc2:#5ff0d9; --sel:#3d3a7a; --sky:#141846;
-  --off:#2a2b55; --offe:#3d3f72; --rail:#24255a;
-  --crd:#08071a;
+  --bg:#0b0b15; --bg2:#0f0f1d; --panel:#15152a; --ink:#ece8de; --ink2:#cac5d8; --muted:#9a95b0;
+  --line:rgba(236,232,222,.2); --line2:rgba(236,232,222,.1); --bga:rgba(11,11,21,.8);
+  --acc:#ff8e63; --acc2:#5ff0d9; --gold:#ffd36e; --sel:#3d3a7a; --sky:#090b25;
+  --btn:#ece8de; --btnt:#0e0d1a; --pgc:#a63d14; --cast:rgba(0,0,0,.5);
+  --inkbg:#12112b; --inkfg:#ece8de; --inkmu:#aaa5c2; --inkline:rgba(236,232,222,.15);
   color-scheme:dark;
 }}
 :root[data-theme="dark"]{
-  --bg:#0d0c22; --bg2:#121233; --panel:#17173a; --panel2:#1e1f4a; --ink:#f3eedf; --ink2:#d3cce6; --muted:#a7a2c8;
-  --edge:#05040f; --hi:#34366e; --lo:#0b0a1e; --cast:rgba(0,0,0,.45);
-  --acc:#ff9466; --acc2:#5ff0d9; --sel:#3d3a7a; --sky:#141846;
-  --off:#2a2b55; --offe:#3d3f72; --rail:#24255a;
-  --crd:#08071a;
+  --bg:#0b0b15; --bg2:#0f0f1d; --panel:#15152a; --ink:#ece8de; --ink2:#cac5d8; --muted:#9a95b0;
+  --line:rgba(236,232,222,.2); --line2:rgba(236,232,222,.1); --bga:rgba(11,11,21,.8);
+  --acc:#ff8e63; --acc2:#5ff0d9; --gold:#ffd36e; --sel:#3d3a7a; --sky:#090b25;
+  --btn:#ece8de; --btnt:#0e0d1a; --pgc:#a63d14; --cast:rgba(0,0,0,.5);
+  --inkbg:#12112b; --inkfg:#ece8de; --inkmu:#aaa5c2; --inkline:rgba(236,232,222,.15);
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--txt);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-variant-ligatures:none}
 ::selection{background:var(--sel);color:var(--ink)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 button{font:inherit;color:inherit}
 canvas{image-rendering:pixelated;display:block}
-.skip{position:absolute;left:16px;top:-80px;z-index:50;background:var(--panel);color:var(--ink);padding:10px 14px;font-family:var(--pix);font-size:16px;box-shadow:0 0 0 3px var(--edge)}
+.skip{position:absolute;left:16px;top:-80px;z-index:50;background:var(--panel);color:var(--ink);padding:10px 14px;font-family:var(--pix);font-size:16px;border:2px solid var(--ink)}
 .skip:focus{top:16px}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* pixel panel + button */
-.px{background:var(--panel);box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 4px 0 0 var(--edge),0 -4px 0 0 var(--edge),inset 4px 4px 0 0 var(--hi),inset -4px -4px 0 0 var(--lo),8px 8px 0 0 var(--cast)}
-.pbtn{font-family:var(--pix);font-size:16px;text-transform:uppercase;background:var(--panel);color:var(--ink);border:0;cursor:pointer;height:48px;padding:0 18px;display:inline-flex;align-items:center;gap:10px;text-decoration:none;white-space:nowrap;
-  box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 4px 0 0 var(--edge),0 -4px 0 0 var(--edge),inset 0 -4px 0 0 var(--lo),inset 0 4px 0 0 var(--hi)}
-.pbtn:hover{background:var(--panel2)}
-.pbtn:active{transform:translateY(4px);box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 4px 0 0 var(--edge),0 -4px 0 0 var(--edge),inset 0 4px 0 0 var(--lo)}
-.pbtn.gold{background:var(--g3);color:#211a30;box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 4px 0 0 var(--edge),0 -4px 0 0 var(--edge),inset 0 -4px 0 0 var(--g4),inset 0 4px 0 0 var(--g2)}
-.pbtn.gold:hover{background:var(--g2)}
-.pbtn.res{position:relative;background:#5ff0d9;color:#211a30;box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 4px 0 0 var(--edge),0 -4px 0 0 var(--edge),inset 0 -4px 0 0 #1fa894,inset 0 4px 0 0 #c4fff5,8px 8px 0 0 var(--cast);animation:bob 1.6s steps(1) infinite}
-.pbtn.res:hover{background:#9ff8ea;animation:none}
-.pbtn.res .ico{width:20px;height:24px;flex:none}
-.pbtn.res .tagx{position:absolute;top:-14px;right:-12px;font-size:11px;line-height:1;padding:4px 6px;background:#b0421d;color:#fff;box-shadow:0 0 0 3px var(--edge);animation:blink 1s steps(1) infinite}
-@keyframes bob{0%,70%{transform:none}80%{transform:translateY(-4px)}90%{transform:none}}
-@keyframes blink{0%,60%{opacity:1}61%,100%{opacity:.35}}
+/* ---------- type ---------- */
+.eyebrow{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;letter-spacing:.02em;color:var(--acc);margin:0 0 20px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:8px;height:8px;background:var(--acc);flex:none}
+h2{font-family:var(--ser);font-weight:400;font-size:clamp(52px,7vw,96px);line-height:.95;letter-spacing:-.015em;margin:0 0 24px}
+h2 em{font-style:italic;color:var(--acc)}
+.lead{font-size:20px;line-height:1.55;max-width:54ch;margin:0;color:var(--ink2)}
 
-/* ---------- HUD ---------- */
-.hud{position:fixed;left:0;right:0;top:0;z-index:30;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:20px var(--g);pointer-events:none}
-.hud > *{pointer-events:auto}
-.stat{display:flex;align-items:center;gap:14px;padding:8px 14px 8px 8px;text-decoration:none;color:var(--ink)}
-#face{width:48px;height:48px;background:var(--panel2);box-shadow:0 0 0 4px var(--edge)}
-.lv{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;white-space:nowrap}
-.lv b{color:var(--acc)}
-.lv.max b{color:var(--g3)}
-.xp{display:flex;gap:2px;padding:3px;background:var(--edge)}
-.xp i{width:6px;height:10px;background:var(--lo)}
-.xp i.on{background:var(--g3);box-shadow:inset 0 3px 0 var(--g2),inset 0 -3px 0 var(--g4)}
-.abil{display:flex;gap:8px;margin-left:4px}
-.slot{padding:3px;background:var(--panel2);box-shadow:0 0 0 3px var(--edge);line-height:0}
-.slot canvas{width:18px;height:18px;opacity:.22;filter:grayscale(1)}
-.slot.on canvas{opacity:1;filter:none}
-.slot.on{background:var(--panel)}
-.slot.pop{animation:pop .5s steps(3)}
-@keyframes pop{0%{transform:scale(1.6);background:#fff}100%{transform:none}}
-.hr{display:flex;gap:20px;align-items:center}
-.nav{display:flex;gap:4px;padding:8px 10px}
-.nav a{font-family:var(--pix);font-size:16px;text-transform:uppercase;text-decoration:none;padding:6px 10px;color:var(--ink2)}
-.nav a:hover,.nav a.here{color:var(--ink);background:var(--panel2);box-shadow:0 0 0 3px var(--edge)}
-.nav a.res{color:#211a30;background:#5ff0d9;box-shadow:0 0 0 3px var(--edge)}
-.nav a.res:hover{background:#9ff8ea}
-.tgl{width:56px;height:56px;padding:0;justify-content:center}
+/* ---------- buttons ---------- */
+.btn{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;letter-spacing:.02em;height:52px;padding:0 22px;display:inline-flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap;cursor:pointer;color:var(--ink);background:transparent;border:2px solid var(--ink);transition:transform .12s steps(2),box-shadow .12s steps(2),background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.primary{background:var(--btn);color:var(--btnt);border-color:var(--btn);box-shadow:5px 5px 0 0 var(--acc)}
+.btn.primary:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 0 var(--acc);background:var(--btn);color:var(--btnt)}
+.btn.primary:active{transform:translate(5px,5px);box-shadow:0 0 0 0 var(--acc)}
+.btn .ico{width:16px;height:20px;flex:none}
+.btn .pg{font-size:16px;color:var(--acc);margin-left:-2px}
+.btn.primary .pg{color:var(--pgc)}
+.btn.sm{height:44px;padding:0 16px}
+
+/* ---------- header ---------- */
+.top{position:fixed;left:0;right:0;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px var(--g);border-bottom:1px solid transparent;transition:background .25s,border-color .25s}
+.top.scrolled{background:var(--bga);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line2)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+#face{width:40px;height:40px;background:var(--bg2);box-shadow:0 0 0 2px var(--ink)}
+.wm{font-family:var(--ser);font-size:26px;line-height:1;letter-spacing:-.01em}
+.wm em{font-style:italic;color:var(--acc)}
+.hr{display:flex;align-items:center;gap:10px}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;text-decoration:none;padding:12px 12px;color:var(--ink2)}
+.nav a:hover{color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.nav a.res{color:var(--btnt);background:var(--btn);margin-left:10px;padding:12px 16px}
+.nav a.res:hover{background:var(--acc);color:#fff;text-decoration:none}
+.tgl{width:44px;height:44px;padding:0;display:grid;place-items:center;border:2px solid var(--ink);background:transparent;cursor:pointer}
+.tgl:hover{background:var(--ink)}
 #tglc{width:24px;height:24px}
 
-/* ---------- HERO ---------- */
-.hero{position:relative;height:100vh;height:100svh;min-height:640px;max-height:1040px;overflow:hidden;background:var(--sky)}
+/* ---------- hero ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:680px;max-height:1080px;overflow:hidden;background:var(--sky)}
 #sky{position:absolute;left:0;bottom:0}
-.hcopy{position:relative;z-index:2;padding:calc(92px + 3vh) var(--g) 0;max-width:calc(980px + 2 * var(--g));margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
-.kicker{font-family:var(--pix);font-size:16px;text-transform:uppercase;margin:0 0 16px;color:var(--ink2);letter-spacing:.04em}
-h1{font-family:var(--pix);font-weight:700;font-size:120px;line-height:.92;margin:0;color:var(--ink);text-shadow:8px 8px 0 var(--cast);white-space:nowrap}
-h1 span{color:var(--acc)}
-.tag{font-size:36px;line-height:1.2;font-weight:700;letter-spacing:-.01em;max-width:none;margin:24px 0 10px;color:var(--ink)}
-.sub{font-size:20px;line-height:1.5;font-weight:500;max-width:56ch;margin:0 0 32px;color:var(--ink2)}
-.cta{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
-@keyframes bob{50%{transform:translateY(4px)}}
+.hcopy{position:relative;z-index:2;padding:calc(84px + 4vh) var(--g) 0;max-width:calc(1040px + 2 * var(--g));margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.kicker{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;letter-spacing:.04em;margin:0 0 22px;color:var(--ink2);display:flex;align-items:center;gap:12px}
+.kicker::before,.kicker::after{content:"";width:24px;height:2px;background:var(--ink2);opacity:.6}
+h1{font-family:var(--ser);font-weight:400;font-size:clamp(72px,12.2vw,176px);line-height:.88;letter-spacing:-.025em;margin:0;color:var(--ink);white-space:nowrap}
+h1 em{font-style:italic;color:var(--acc)}
+.tag{font-size:clamp(24px,2.7vw,36px);line-height:1.15;font-weight:600;letter-spacing:-.022em;margin:28px 0 14px;color:var(--ink);max-width:30ch}
+.sub{font-size:19px;line-height:1.55;font-weight:400;max-width:64ch;text-wrap:balance;margin:0 0 22px;color:var(--ink2)}
+.hp{list-style:none;margin:0 0 32px;padding:0;display:grid;grid-template-columns:auto auto;gap:10px 40px;justify-content:center}
+.hp li{font-family:var(--pix);font-size:16px;line-height:1.2;text-transform:uppercase;letter-spacing:.02em;color:var(--ink);white-space:nowrap;display:flex;align-items:center;gap:10px}
+.hp li::before{content:"";width:7px;height:7px;background:var(--acc);flex:none}
+.hp li span{text-wrap:balance}
+.cta{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:center}
+.reach{margin:30px 0 0;font-family:var(--pix);font-size:16px;line-height:1.6;text-transform:uppercase;letter-spacing:.02em;color:var(--ink2);display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px}
+.reach a,.reach button{color:var(--ink2);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--line)}
+.reach a:hover,.reach button:hover{color:var(--ink);text-decoration-color:var(--acc)}
+.reach button{font:inherit;text-transform:inherit;letter-spacing:inherit;background:none;border:0;padding:0;cursor:pointer}
+.reach .sep{opacity:.5}
+.reach .ok{color:var(--acc2);text-decoration:none}
+.reach .ok:empty{display:none}
 
-/* ---------- STORY ---------- */
-section.sec{padding:128px var(--g);position:relative}
+/* ---------- sections ---------- */
+section.sec{padding:clamp(96px,12vw,160px) var(--g);position:relative}
 .wrap{max-width:1200px;margin:0 auto}
-.eyebrow{font-family:var(--pix);font-size:16px;text-transform:uppercase;color:var(--acc);margin:0 0 16px}
-h2{font-family:var(--pix);font-weight:700;font-size:64px;line-height:1;margin:0 0 24px;text-shadow:4px 4px 0 var(--cast)}
-.lead{font-size:20px;max-width:52ch;margin:0 0 72px;color:var(--ink2)}
+.sh{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 64px;align-items:end;padding-bottom:40px;border-bottom:2px solid var(--ink);margin-bottom:clamp(64px,8vw,112px)}
+.sh h2{margin:0}
+.sh .lead{padding-bottom:10px}
+
+/* ---------- story ---------- */
 #story{background:var(--bg)}
-.run{list-style:none;margin:0;padding:0;position:relative}
-.ch{display:grid;grid-template-columns:64px auto minmax(0,1fr);gap:0 48px;align-items:center;position:relative;padding-bottom:96px}
-.ch:last-child{padding-bottom:0}
-.ch::before{content:"";position:absolute;left:30px;top:50%;bottom:-50%;width:4px;background:repeating-linear-gradient(var(--rail) 0 8px,transparent 8px 16px)}
-.ch:last-child::before{display:none}
-.ch.lit::before{background:repeating-linear-gradient(var(--g3) 0 8px,transparent 8px 16px)}
-.node{grid-column:1;justify-self:center;width:40px;height:40px;position:relative;z-index:1;background:var(--off);
-  box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 4px 0 0 var(--edge),0 -4px 0 0 var(--edge),inset -4px -4px 0 0 var(--offe);
-  display:grid;place-items:center;font-family:var(--pix);font-size:16px;color:var(--ink2)}
-.ch.lit .node{background:var(--g3);color:#211a30;box-shadow:4px 0 0 0 var(--edge),-4px 0 0 0 var(--edge),0 4px 0 0 var(--edge),0 -4px 0 0 var(--edge),inset 4px 4px 0 0 var(--g2),inset -4px -4px 0 0 var(--g4)}
-.dio{grid-column:2;margin:0;padding:8px;line-height:0;background:var(--edge)}
-.dio canvas{background:var(--off)}
-.txt{grid-column:3}
-.chip{font-family:var(--pix);font-size:16px;text-transform:uppercase;margin:0 0 12px;color:var(--ink2)}
-.chip a{color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
-.ch h3{font-family:var(--pix);font-weight:700;font-size:40px;line-height:1.05;margin:0 0 16px}
-.ch .story{margin:0 0 24px;max-width:48ch}
+.run{list-style:none;margin:0;padding:0;display:grid;gap:clamp(88px,10vw,144px);counter-reset:ch}
+.ch{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px clamp(40px,5vw,80px);align-items:center;counter-increment:ch}
+.ch:nth-child(even){grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.ch:nth-child(even) .dio{order:2}
+.dio{margin:0;display:flex;flex-direction:column;gap:14px;min-width:0}
+.dio .frame{line-height:0;align-self:flex-start;background:var(--bg2);box-shadow:0 0 0 2px var(--ink),12px 12px 0 0 var(--cast)}
+.ch:nth-child(even) .frame{align-self:flex-end}
+.dio canvas{background:var(--bg2)}
+.dio figcaption{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;letter-spacing:.02em;color:var(--muted);display:flex;justify-content:space-between;gap:16px}
+.dio figcaption .st{color:var(--muted)}
+.ch.lit .dio figcaption .st{color:var(--acc2)}
+.txt{min-width:0}
+.num{font-family:var(--ser);font-style:italic;font-size:88px;line-height:.8;color:var(--acc);display:block;margin:0 0 22px}
+.chip{font-family:var(--pix);font-size:16px;line-height:1.5;text-transform:uppercase;letter-spacing:.02em;margin:0 0 14px;color:var(--ink2)}
+.chip a{color:var(--ink);text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--acc)}
 .chip .when{color:var(--muted)}
-.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
-.tags li{font-family:var(--pix);font-size:16px;text-transform:uppercase;padding:5px 10px 4px;color:var(--ink2);background:var(--panel);box-shadow:0 0 0 3px var(--offe)}
-.ch.lit .tags li{box-shadow:0 0 0 3px var(--edge)}
+.ch h3{font-family:var(--ser);font-weight:400;font-size:clamp(40px,4.2vw,56px);line-height:1;letter-spacing:-.015em;margin:0 0 20px}
+.ch .story{margin:0 0 22px;max-width:50ch;font-size:18px;line-height:1.6;color:var(--ink2)}
 .story a{color:var(--ink);font-weight:600;text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
-.wm{font-family:var(--pix);font-size:16px;font-weight:700;text-transform:uppercase;white-space:nowrap}
-.wm span{color:var(--acc)}
+.tags{list-style:none;margin:0;padding:14px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;border-top:1px solid var(--line);max-width:50ch}
+.tags li{font-family:var(--pix);font-size:16px;line-height:1.4;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
+.tags li::before{content:"";width:6px;height:6px;background:var(--acc2)}
 
-/* ---------- WORK ---------- */
-#work{background:var(--bg2)}
-.inv{background:var(--crd);color:var(--crdi);padding:64px 56px 56px;box-shadow:6px 0 0 0 var(--edge),-6px 0 0 0 var(--edge),0 6px 0 0 var(--edge),0 -6px 0 0 var(--edge),12px 12px 0 0 var(--cast)}
-.inv .eyebrow{color:#ffd36e}
-.inv h2{color:#f3eedf;text-shadow:4px 4px 0 #000}
-.inv .lead{color:#cfc8e6;margin-bottom:56px}
-.grp{margin:0 0 48px}
-.grp:last-child{margin-bottom:0}
-.grp h3{font-family:var(--pix);font-size:16px;text-transform:uppercase;color:#ffd36e;margin:0 0 20px;display:flex;align-items:center;gap:14px;font-weight:700}
-.grp h3::after{content:"";flex:1;height:4px;background:#3a3466}
-.grp h3 canvas{flex:none}
-.items{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.it{background:#221e3d;padding:20px 20px 18px;box-shadow:inset 0 0 0 3px #3a3466,inset 3px 3px 0 3px #2e2a52;display:flex;flex-direction:column;gap:6px}
-.it .n{font-weight:700;font-size:20px;line-height:1.25;color:#fff}
-.it .d{color:#cfc8e6;font-size:16px;line-height:1.5}
-.it .v{color:#5ff0d9;font-size:15px;font-weight:600}
-.it .links{display:flex;gap:16px;margin-top:auto;padding-top:8px}
-.it .links a{font-weight:600;font-size:16px;color:#ffb38f;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
-.it .links a:hover{color:#fff}
+/* ---------- work ---------- */
+#work{background:var(--inkbg);color:var(--inkfg)}
+#work .sh{border-color:var(--inkfg)}
+#work .eyebrow{color:var(--inkgold)}#work .eyebrow::before{background:var(--inkgold)}
+#work h2 em{color:var(--inkacc)}
+#work .lead{color:var(--inkmu)}
+.grp{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:24px 64px;padding:48px 0;border-top:1px solid var(--inkline)}
+.grp:first-of-type{border-top:0;padding-top:0}
+.gh{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.gh canvas{margin-bottom:6px}
+.gh h3{font-family:var(--ser);font-weight:400;font-size:40px;line-height:1;letter-spacing:-.01em;margin:0;color:#fff}
+.gh .gsub{font-family:var(--pix);font-size:16px;line-height:1.5;text-transform:uppercase;letter-spacing:.02em;color:var(--inkmu);margin:0}
+.items{list-style:none;margin:0;padding:0;counter-reset:it}
+.it{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 18px;padding:18px 0;border-top:1px solid var(--inkline);counter-increment:it;align-items:start}
+.items .it:first-child{border-top:0;padding-top:0}
+.it::before{content:counter(it,decimal-leading-zero);font-family:var(--pix);font-size:16px;line-height:1;color:var(--inkmu);padding-top:6px;grid-row:1/span 3}
+.it .n{font-weight:600;font-size:22px;line-height:1.2;letter-spacing:-.015em;color:#fff;grid-column:2}
+.it .d{color:var(--inkmu);font-size:16px;line-height:1.5;grid-column:2}
+.it .v{grid-column:2;font-family:var(--pix);font-size:16px;line-height:1.4;text-transform:uppercase;color:var(--inkgold);margin-top:4px}
+.it .links{grid-column:3;grid-row:1/span 3;display:flex;gap:6px;padding-top:2px}
+.it .links a{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;color:var(--inkcy);text-decoration:none;padding:8px 10px;border:1px solid var(--inkline)}
+.it .links a:hover{background:var(--inkcy);color:var(--inkbg);border-color:var(--inkcy)}
+.grp.feat{grid-template-columns:minmax(0,1fr);gap:40px;padding-bottom:64px}
+.grp.feat .gh{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 28px;align-items:center}
+.grp.feat .gh canvas{grid-row:1/span 2;margin:0}
+.grp.feat .gh h3{font-size:clamp(44px,5vw,64px)}
+.grp.feat .gh h3 em{font-style:italic;color:var(--inkgold)}
+.grp.feat .items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;border-top:1px solid var(--inkline)}
+.grp.feat .items .it{border-top:1px solid var(--inkline);padding-top:18px}
+.grp.feat .items .it:first-child,.grp.feat .items .it:nth-child(2){border-top:0}
+.grp.feat .it .n{font-size:24px}
 
-/* ---------- CONTACT ---------- */
-#contact{background:#0d0c22;color:#f3eedf;padding-bottom:104px}
-#contact .eyebrow{color:#ffb38f}
-#contact h2{text-shadow:4px 4px 0 #000}
-#contact .lead{color:#d3cce6;margin-bottom:32px}
-.cont{display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center;max-width:1200px;margin:0 auto}
-#save{box-shadow:0 0 0 6px #05040f}
-.menu{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:18px}
-.menu li{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.menu .cur{width:12px;height:16px;background:#ffd36e;clip-path:polygon(0 0,100% 50%,0 100%);visibility:hidden;flex:none}
-.menu li:first-child .cur,.menu li:hover .cur,.menu li:focus-within .cur{visibility:visible}
-.email{font-size:24px;font-weight:600;user-select:all;-webkit-user-select:all}
-.menu a.big2{font-size:22px;font-weight:600;color:#f3eedf;text-decoration:underline;text-decoration-color:#ff9466;text-decoration-thickness:3px;text-underline-offset:6px}
-#contact .pbtn{--panel:#17173a;--panel2:#1e1f4a;--ink:#f3eedf;--edge:#05040f;--hi:#34366e;--lo:#0b0a1e}
-.copied{font-size:15px;color:#5ff0d9;min-width:12ch;font-weight:600}
-.based{color:#d3cce6;margin:0}
-footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:15px;color:#a7a2c8;background:#0d0c22;border-top:4px solid #05040f}
+/* ---------- contact ---------- */
+#contact{background:var(--bg2);padding-bottom:96px}
+.strip{margin:0 0 72px;line-height:0}
+#save{box-shadow:0 0 0 2px var(--ink),12px 12px 0 0 var(--cast)}
+.cont{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px 64px;align-items:start}
+.cont .lead{margin-bottom:0}
+.menu{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.menu li{display:flex;align-items:center;gap:14px 18px;flex-wrap:wrap}
+.email{font-family:var(--ser);font-size:clamp(34px,4.6vw,64px);line-height:1;letter-spacing:-.02em;color:var(--ink);user-select:all;-webkit-user-select:all;word-break:break-all}
+.copied{font-family:var(--pix);font-size:16px;color:var(--acc2);min-width:10ch;text-transform:uppercase}
+.menu .row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.based{color:var(--muted);margin:8px 0 0;font-size:16px}
+footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:15px;color:var(--muted);background:var(--bg2);border-top:1px solid var(--line)}
 
+
+/* ---------- overview / before ---------- */
+#overview{background:var(--bg)}
+.ovh{font-family:var(--ser);font-weight:400;font-size:clamp(34px,4.1vw,60px);line-height:1.04;letter-spacing:-.016em;margin:0 0 22px;max-width:21em;text-wrap:balance}
+.ovh em{font-style:italic;color:var(--acc)}
+.ovlead{font-size:19px;line-height:1.55;color:var(--ink2);max-width:62ch;margin:0 0 44px}
+.ovlead a{color:var(--ink);font-weight:600;text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
+.proof{list-style:none;margin:0 0 clamp(56px,7vw,88px);padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.pf .cameo{height:42px!important;object-fit:contain;object-position:left bottom}
+.pf{min-width:0;border:2px solid var(--ink);background:var(--panel);padding:18px 20px 20px;box-shadow:6px 6px 0 0 var(--cast);display:flex;flex-direction:column;gap:10px}
+.pf canvas{margin-bottom:4px}
+.pf .pk{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;letter-spacing:.02em;color:var(--acc)}
+.pf .pb{font-family:var(--ser);font-size:clamp(24px,2vw,30px);line-height:1.08;letter-spacing:-.012em;color:var(--ink);text-wrap:balance}
+.pf .pd{font-size:16px;line-height:1.5;color:var(--muted);margin-top:auto}
+.ov{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px clamp(40px,5vw,80px);align-items:start}
+.ovr{display:flex;flex-direction:column;align-items:flex-end}
+.ovr .dio{width:100%;margin-bottom:36px}
+.ovr .dio .frame{align-self:flex-end}
+.ovr .ovk{align-self:flex-start}
+.ovk{font-family:var(--pix);font-size:16px;line-height:1;text-transform:uppercase;letter-spacing:.02em;color:var(--acc);margin:0 0 6px;display:flex;align-items:center;gap:12px}
+.ovk::before{content:"";width:8px;height:8px;background:var(--acc);flex:none}
+.build{list-style:none;margin:0;padding:0;counter-reset:b}
+.build li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:6px 16px;padding:18px 0;border-top:1px solid var(--line);counter-increment:b;align-items:start}
+.build li:first-child{border-top:0;padding-top:12px}
+.build li::before{content:counter(b,decimal-leading-zero);font-family:var(--pix);font-size:16px;line-height:1;color:var(--muted);padding-top:9px;grid-row:1/span 2}
+.build a{grid-column:2;font-family:var(--ser);font-size:clamp(26px,2.2vw,31px);line-height:1.1;letter-spacing:-.012em;color:var(--ink);text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:5px;text-wrap:balance;justify-self:start}
+.build a::after{content:"\2193";font-family:var(--pix);font-size:16px;color:var(--acc);margin-left:10px;display:inline-block;text-decoration:none}
+.build a:hover{color:var(--acc)}
+.build p{grid-column:2;margin:0;color:var(--ink2);font-size:17px;line-height:1.55;max-width:54ch}
+.next{margin:0;font-size:19px;line-height:1.5;color:var(--ink);padding:20px 24px;border:2px solid var(--ink);box-shadow:6px 6px 0 0 var(--acc);background:var(--panel);align-self:stretch}
+.xk{margin-top:clamp(56px,7vw,88px);padding-top:28px;border-top:2px solid var(--ink)}
+.xp{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px clamp(24px,3vw,48px)}
+.xp li{display:flex;flex-direction:column;gap:4px;min-width:0;padding-top:12px}
+.xp .org{font-weight:600;font-size:20px;line-height:1.3;letter-spacing:-.01em;color:var(--ink)}
+.xp .org a{text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
+.xp .when{font-family:var(--pix);font-size:16px;line-height:1.2;text-transform:uppercase;letter-spacing:.02em;color:var(--muted);white-space:nowrap}
+.xp .role{font-size:17px;line-height:1.45;color:var(--ink2);margin-top:4px}
+.xp .did{font-size:16px;line-height:1.55;color:var(--muted);margin-top:6px;max-width:40ch}
+#rsi{background:var(--bg2)}
+#envs{background:var(--bg)}
+#before{background:var(--bg2);padding-top:clamp(80px,10vw,128px)}
+.eyebrow a{color:inherit;text-decoration:none}.eyebrow a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.nw,.chip .when{white-space:nowrap}
+.bf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px clamp(40px,5vw,80px)}
+.bfi{display:flex;flex-direction:column;min-width:0}
+.bfi .dio{margin-bottom:26px}
+.bfi .dio .frame{box-shadow:0 0 0 2px var(--ink),8px 8px 0 0 var(--cast)}
+.bfi h3{font-family:var(--ser);font-weight:400;font-size:clamp(32px,3vw,40px);line-height:1.05;letter-spacing:-.012em;margin:0 0 16px}
+.bfi .story{margin:0;max-width:52ch;font-size:17px;line-height:1.6;color:var(--ink2)}
+.lead a{color:var(--ink);font-weight:600;text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:4px}
+/* ---------- orphan control ---------- */
+h2,h3,.tag,.chip,.gh h3,.gsub,.it .n,.it .v,figcaption span,.kicker,.email{text-wrap:balance}
+p,.lead,.sub,.story,.it .d,.based,.next,.build p,.xp .did,.xp .role,.pf .pd,.ovlead{text-wrap:pretty}
+.sh{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+.sh h2{font-size:clamp(44px,4.5vw,64px)}
+.ch h3{font-size:clamp(36px,3.5vw,48px);max-width:16ch}
+.tags{display:grid;gap:8px 18px;grid-template-columns:minmax(0,1fr)}
+.it .d{max-width:44ch}
 @media (max-width:1180px){
-  h1{font-size:96px}
-  .ch{grid-template-columns:64px minmax(0,1fr);gap:28px 32px}
-  .dio{grid-column:2;justify-self:start}
-  .txt{grid-column:2}
-  .ch::before{top:20px;bottom:-20px}
-  .node{align-self:start}
-  .items{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ov{grid-template-columns:minmax(0,1fr)}
+  .ov{display:block}
+  .ovl{margin-bottom:40px}
+  .ovr{display:flex;flex-direction:column;align-items:stretch}
+  .ovr .dio{order:3;margin:40px 0 0}
+  .ovr .ovk{order:1}
+  .ovr .next{order:2}
+  .ovr .dio .frame{align-self:flex-start}
+  .proof{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sh{grid-template-columns:minmax(0,1fr);gap:20px}
+  .sh .lead{padding-bottom:0}
+}
+@media (max-width:760px){
+  .bf{grid-template-columns:minmax(0,1fr);gap:56px}
+  .bfi .story{font-size:17px}
+  .sh h2{font-size:44px}
+  .ch h3{font-size:36px;max-width:none}
+  .build li{grid-template-columns:30px minmax(0,1fr)}
+  .build a{font-size:26px}
+  .proof{grid-template-columns:minmax(0,1fr);gap:16px}
+  .pf{box-shadow:4px 4px 0 0 var(--cast)}
+  .xp{grid-template-columns:minmax(0,1fr);gap:8px}
+  .xp li{border-top:1px solid var(--line);padding-top:16px}
+  .ovh{font-size:36px}
+  .ovlead{font-size:17px;margin-bottom:32px}
+  .next{font-size:18px;padding:16px 18px}
+}
+@media (max-width:1180px){
+  .ch,.ch:nth-child(even){grid-template-columns:minmax(0,1fr);gap:32px}
+  .ch:nth-child(even) .dio{order:0}
+  .dio .frame,.ch:nth-child(even) .frame{align-self:flex-start}
+  .grp{grid-template-columns:minmax(0,1fr);gap:28px}
+  .grp.feat .items{grid-template-columns:minmax(0,1fr)}
+  .grp.feat .items .it:nth-child(2){border-top:1px solid var(--inkline)}
+  .cont{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:760px){
   body{font-size:17px}
-  .hud{padding:12px 16px}
-  .nav{display:none}
-  .stat{gap:10px;padding:6px 10px 6px 6px}
-  #face{width:40px;height:40px}
-  .slot canvas{width:14px;height:14px}
-  .tgl{width:48px;height:48px}
-  #tglc{width:20px;height:20px}
+  .top{padding:12px 16px}
+  .nav a:not(.res){display:none}
+  .nav a.res{margin-left:0;padding:12px 14px}
+  #face{width:36px;height:36px}
+  .wm{font-size:22px}
   .hero{min-height:680px}
-  .hcopy{padding-top:96px}
-  h1{font-size:64px;line-height:.95;text-shadow:4px 4px 0 var(--cast)}
-  h1 span{display:block}
-  .tag{font-size:26px;margin:20px 0 10px}
-  .sub{font-size:17px;margin-bottom:20px}
-  .cta{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:360px}
-  .cta .pbtn{padding:0 10px;justify-content:center}
-  .cta .pbtn.gold,.cta .pbtn.res,.cta .pbtn:last-child{grid-column:1/-1}
-  section.sec{padding:88px 16px}
-  h2{font-size:40px}
-  .lead{font-size:18px;margin-bottom:48px}
-  .ch{grid-template-columns:minmax(0,1fr);gap:20px;padding-bottom:72px}
-  .ch::before,.node{display:none}
-  .dio{grid-column:1;justify-self:stretch;display:flex;justify-content:center;padding:4px}
-  .txt{grid-column:1}
-  .ch h3{font-size:32px}
-  .inv{padding:40px 20px}
-  .items{grid-template-columns:minmax(0,1fr);gap:16px}
-  .cont{grid-template-columns:minmax(0,1fr);gap:32px}
-  .email{font-size:20px}
+  .hcopy{padding-top:92px;text-align:left;align-items:flex-start}
+  .kicker::before,.kicker::after{display:none}
+  h1{font-size:clamp(64px,19.5vw,80px);line-height:.9}
+  .tag{font-size:26px;margin:22px 0 12px}
+  .sub{font-size:17px;margin-bottom:18px}
+  .hp{grid-template-columns:minmax(0,1fr);justify-content:start;gap:8px;margin-bottom:24px}
+  .hp li{white-space:normal;align-items:flex-start}
+  .hp li::before{margin-top:7px}
+  .cta{justify-content:flex-start;gap:12px;width:100%}
+  .cta .btn{height:48px;padding:0 16px}
+  .cta .btn.primary{width:100%;justify-content:center}
+  .reach{justify-content:flex-start;margin-top:22px;font-size:16px;gap:10px 12px}
+  section.sec{padding:80px 16px}
+  .sh{grid-template-columns:minmax(0,1fr);gap:16px;padding-bottom:28px;margin-bottom:56px}
+  h2{font-size:52px}
+  .lead{font-size:18px}
+  .run{gap:80px}
+  .ch{gap:24px}
+  .num{font-size:64px;margin-bottom:16px}
+  .ch h3{font-size:38px}
+  .dio{gap:10px}
+  .dio .frame{box-shadow:0 0 0 2px var(--ink),8px 8px 0 0 var(--cast)}
+  .dio figcaption{flex-direction:column;gap:6px}
+  .gh h3{font-size:32px}
+  .grp.feat .gh h3{font-size:40px}
+  .it{grid-template-columns:32px minmax(0,1fr);gap:4px 14px}
+  .it .links{grid-column:2;grid-row:auto;padding-top:8px}
+  .it .n{font-size:20px}
+  .grp.feat .it .n{font-size:21px}
+  .strip{margin-bottom:48px}
+  #save{box-shadow:0 0 0 2px var(--ink),8px 8px 0 0 var(--cast)}
+  .email{font-size:30px}
+  .menu{gap:18px}
 }
-@media (max-width:380px){h1{font-size:56px}}
+@media (max-width:380px){h1{font-size:60px}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .slot.pop{animation:none}
-  .pbtn.res,.pbtn.res .tagx{animation:none}
+  .btn{transition:none}
 }
 </style>
 </head>
 <body>
-<a class="skip" href="#story">Skip to the story</a>
-<header class="hud">
-  <a class="stat px" href="#top" aria-label="Jason Lu, back to top">
+<a class="skip" href="#overview">Skip to the story</a>
+<header class="top" id="topbar">
+  <a class="brand" href="#top" aria-label="Jason Lu, back to top">
     <canvas id="face" width="24" height="24" aria-hidden="true"></canvas>
-    <span class="wm">Jason <span>Lu</span></span>
+    <span class="wm">Jason <em>Lu</em></span>
   </a>
   <div class="hr">
-    <nav class="nav px" aria-label="Sections"><a href="#story">Story</a><a href="#work">Work</a><a href="#contact">Contact</a><a class="res" href="Jason_Lu_Resume.pdf">&#9733; Resume</a></nav>
-    <button class="pbtn tgl" id="tgl" type="button" aria-label="Switch day / night"><canvas id="tglc" width="12" height="12" aria-hidden="true"></canvas></button>
+    <nav class="nav" aria-label="Sections"><a href="#overview">Overview</a><a href="#envs">Environments</a><a href="#work">Work</a><a href="#contact">Contact</a><a class="res" href="Jason_Lu_Resume.pdf">Resume</a></nav>
+    <button class="tgl" id="tgl" type="button" aria-label="Switch day / night"><canvas id="tglc" width="12" height="12" aria-hidden="true"></canvas></button>
   </div>
 </header>
 
@@ -242,125 +349,204 @@ footer{padding:28px var(--g) 40px;display:flex;justify-content:space-between;gap
   <canvas id="sky" aria-hidden="true"></canvas>
   <div class="hcopy">
     <p class="kicker">Research engineer &middot; New York</p>
-    <h1>Jason <span>Lu</span></h1>
+    <h1>Jason <em>Lu</em></h1>
     <p class="tag">I build the systems that let AI improve AI.</p>
-    <p class="sub">Verified agentic data, RL environments and benchmarks (3D, game dev, AI research) where frontier agents learn, get judged, and run AI research end to end.</p>
+    <p class="sub">Research engineer, M.S. CS at Columbia. I build verified post-training data, RL environments and benchmarks for 3D and game dev, and the infrastructure where AI agents run AI research end to end.</p>
+    <ul class="hp" aria-label="Highlights"><li><span>Environments bought by top AI companies</span></li><li><span>RSI: RSIGym, <span class="nw">RSIBench-Data</span>, G&ouml;del Forest</span></li><li><span>Data shipped to ByteDance, Qwen and GLM</span></li><li><span>M.S. CS at Columbia</span></li></ul>
     <div class="cta">
-      <a class="pbtn gold" href="#story">&#9654; Read the story</a>
-      <a class="pbtn res" href="Jason_Lu_Resume.pdf"><svg class="ico" viewBox="0 0 10 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#211a30" d="M1 0h6v1h1v1h1v10H1z"/><path fill="#fffaf0" d="M2 1h5v2h1v8H2z"/><path fill="#211a30" d="M3 4h4v1H3zm0 2h4v1H3zm0 2h3v1H3z"/></svg>Resume<span class="tagx">1 page</span></a>
-      <a class="pbtn" href="#work">Selected work</a>
-      <a class="pbtn" href="https://github.com/HaochengLu">GitHub</a>
-      <a class="pbtn" href="#contact">Contact</a>
+      <a class="btn primary" href="Jason_Lu_Resume.pdf"><svg class="ico" viewBox="0 0 10 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M1 0h6v1h1v1h1v10H1z"/><path fill="var(--btn)" d="M2 1h5v2h1v8H2z"/><path fill="currentColor" d="M3 4h4v1H3zm0 2h4v1H3zm0 2h3v1H3z"/></svg>Resume <span class="pg">&middot; 1 page</span></a>
+      <a class="btn" href="#overview">&#9654;&#xFE0E; At a glance</a>
     </div>
+    <p class="reach"><a href="#work">Selected work</a><span class="sep">/</span><a href="https://github.com/HaochengLu">GitHub</a><span class="sep">/</span><a href="https://www.linkedin.com/in/haocheng-lu-131920275/">LinkedIn</a><span class="sep">/</span><button type="button" class="cp" data-copy="hl4072@columbia.edu" aria-label="Copy email address hl4072@columbia.edu">hl4072@columbia.edu</button><span class="ok" data-copied aria-live="polite"></span></p>
   </div>
 </section>
 
-<section class="sec" id="story" aria-labelledby="storyh">
+<section class="sec" id="overview" aria-labelledby="ovh">
   <div class="wrap">
-    <p class="eyebrow">The story</p>
-    <h2 id="storyh">Four chapters</h2>
-    <p class="lead">Teaching AI to read science, to work with people, to improve itself, and what comes next. Each scene comes to life as you scroll.</p>
-    <ol class="run" id="run">
+    <p class="eyebrow">At a glance</p>
+    <h2 class="ovh" id="ovh">Top AI companies buy the environments I build. ByteDance, Qwen and GLM train on data from <em>the engine I architected.</em></h2>
+    <p class="ovlead">Research engineer, M.S. CS at <a href="https://www.columbia.edu/">Columbia</a>, New York. I build the worlds where AI models learn and get judged, make sure those worlds can&rsquo;t be fooled, and feed them back into training. The goal is AI that improves AI.</p>
+    <ul class="proof">
+      <li class="pf"><canvas class="cameo" data-cameo="flag" aria-hidden="true"></canvas><span class="pk">Environments</span><span class="pb">Bought by top AI companies</span><span class="pd">Three RL environments and benchmarks for 3D and game dev, built at Evolvent AI.</span></li>
+      <li class="pf"><canvas class="cameo" data-cameo="crate" aria-hidden="true"></canvas><span class="pk">Data</span><span class="pb">Shipped to ByteDance, Qwen and GLM</span><span class="pd">Recurring post-training data deliveries from the agentic synthesis engine I architected.</span></li>
+      <li class="pf"><canvas class="cameo" data-cameo="paper" aria-hidden="true"></canvas><span class="pk">Research</span><span class="pb">Recursive <span class="nw">self-improvement</span></span><span class="pd">Three papers on agents that run AI research: RSIGym (co-lead), <span class="nw">RSIBench-Data</span> and G&ouml;del Forest.</span></li>
+      <li class="pf"><canvas class="cameo" data-cameo="bot" aria-hidden="true"></canvas><span class="pk">Agents &middot; Intent</span><span class="pb">A 3D ad agent, commercialized</span><span class="pd">It builds the scene in Blender and renders the ad video. Plus a team agent and a <span class="nw">crash-safe</span> runtime.</span></li>
+      <li class="pf"><canvas class="cameo" data-cameo="reader" aria-hidden="true"></canvas><span class="pk">Science AI &middot; DP Technology</span><span class="pb">Uni-Parser &amp; <span class="nw">MolParser-Mobile</span></span><span class="pd">Science papers into training corpora at scale, and a tiny model that reads molecules.</span></li>
+      <li class="pf"><canvas class="cameo" data-cameo="cap" aria-hidden="true"></canvas><span class="pk">Education</span><span class="pb">M.S. CS at Columbia</span><span class="pd">Expected Dec 2027. B.S. CS at NYU Shanghai. Based in New York.</span></li>
+    </ul>
+    <div class="ov">
+      <div class="ovl">
+        <h3 class="ovk">What I build</h3>
+        <ol class="build">
+          <li><a href="#rsi">Verified agentic <span class="nw">post-training</span> data</a><p>Author agents build executable tasks, programs decide pass or fail, and reviewer agents from other model families hunt reward hacking. Every trajectory is verified before it ships.</p></li>
+          <li><a href="#envs">RL environments &amp; benchmarks <span class="nw">for 3D and game dev</span></a><p>Agents repair broken meshes in Blender, rebuild beatable Godot levels from screenshots, and ship whole games from a spec. Graded by what actually happens, not what looks right.</p></li>
+          <li><a href="#loop">Recursive self-improvement</a><p>Agents that run AI research end to end: synthesize data, train, evaluate, repeat. Three papers: RSIGym, <span class="nw">RSIBench-Data</span> and G&ouml;del Forest.</p></li>
+          <li><a href="#before">Agents for real products</a><p>At Intent: a 3D ad agent in Blender, a team agent for group chats, a <span class="nw">crash-safe</span> runtime.</p></li>
+          <li><a href="#before">Science documents into training data</a><p>At DP Technology: Uni-Parser inference at scale and <span class="nw">MolParser-Mobile</span>.</p></li>
+        </ol>
+      </div>
+      <div class="ovr">
+        <figure class="dio" data-stage="line"><div class="frame"><canvas aria-hidden="true"></canvas></div><figcaption><span>Data &rarr; worlds &rarr; agents &rarr; data</span><span class="st">illustrative</span></figcaption></figure>
+        <h3 class="ovk">What I want next</h3>
+        <p class="next">To build the data, environments and evals that let AI agents improve AI, at a frontier lab. Looking for Summer 2027 research engineering roles in New York.</p>
+      </div>
+    </div>
+    <h3 class="ovk xk">Experience</h3>
+    <ul class="xp">
+      <li><span class="org"><a href="https://evolvent.co/en">Evolvent AI</a></span><span class="when">May 2026 &ndash; now</span><span class="role">Research Assistant, Recursive <span class="nw">Self-Improvement</span> Infrastructure</span><span class="did">Architected the data synthesis engine, built three RL environments that top AI companies bought, and research recursive self-improvement.</span></li>
+      <li><span class="org"><a href="https://intent.app/">Intent (GroupUltra)</a></span><span class="when">Feb &ndash; Aug 2026</span><span class="role">Agent Systems Engineering Intern</span><span class="did">An agent that composes and renders 3D ad videos in Blender, a shared team agent for group chats, a crash-safe runtime for day-long tasks.</span></li>
+      <li><span class="org"><a href="https://www.dp.tech/en">DP Technology</a></span><span class="when">Mar 2025 &ndash; Feb 2026</span><span class="role">Algorithm Engineering Intern, <span class="nw">Uni-Parser</span> team</span><span class="did">Scaled Uni-Parser inference for science papers and patents; trained MolParser-Mobile, a tiny model that reads molecule drawings.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="rsi" aria-labelledby="rsih">
+  <div class="wrap">
+    <header class="sh">
+      <div><p class="eyebrow"><a href="https://evolvent.co/en">Evolvent AI</a> <span class="nw">&middot; May 2026 &ndash; now</span></p><h2 id="rsih">Agentic data &amp; <em class="nw">self-improvement</em></h2></div>
+      <p class="lead">Data that can&rsquo;t lie, and agents that improve. A data engine whose every trajectory is verified before it ships, and a lab where frontier agents run AI research on their own, round after round.</p>
+    </header>
+    <ol class="run">
       <li class="ch">
-        <span class="node" aria-hidden="true"><span class="n">1</span></span>
-        <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
+        <figure class="dio" data-stage="factory"><div class="frame"><canvas aria-hidden="true"></canvas></div><figcaption><span>The factory line</span><span class="st">illustrative</span></figcaption></figure>
         <div class="txt">
-          <p class="chip">01 &middot; <a href="https://www.dp.tech/en">DP Technology</a> <span class="when">&middot; Mar 2025 &ndash; Feb 2026</span></p>
-          <h3>Reading</h3>
-          <p class="story">My first chapter was teaching machines to read science. On the <a href="https://uni-parser.github.io/">Uni-Parser</a> team at DP Technology I worked on the inference system that turns papers and patents, with their text, tables, formulas and molecules, into clean training data for models, and on <a href="https://huggingface.co/UniParser/MolParser-Mobile">MolParser-Mobile</a>, a tiny model that reads molecule drawings.</p>
-          <ul class="tags"><li>Document AI</li><li>Inference at scale</li><li>Small, fast models</li></ul>
+          <p class="chip">Agentic data synthesis engine <span class="when">&middot; architect</span></p>
+          <h3>Every trajectory earns its way out</h3>
+          <p class="story">The engine I architected works like a factory line. Author agents turn benchmarks and real engineering issues into executable tasks. A program, not a model, decides whether a solution passes. Then reviewer agents from different model families go over every trajectory looking for the ways an agent can cheat its way to a pass, and nothing ships until it has survived all of that. That line powers our recurring post-training data deliveries to ByteDance, Alibaba Qwen and Zhipu GLM.</p>
+          <ul class="tags"><li>Author agents</li><li>Programmatic verification</li><li>Reward-hack review</li></ul>
         </div>
       </li>
-      <li class="ch">
-        <span class="node" aria-hidden="true"><span class="n">2</span></span>
-        <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
+      <li class="ch" id="loop">
+        <figure class="dio" data-stage="loop"><div class="frame"><canvas aria-hidden="true"></canvas></div><figcaption><span>The research loop</span><span class="st">illustrative</span></figcaption></figure>
         <div class="txt">
-          <p class="chip">02 &middot; <a href="https://intent.app/">Intent</a> <span class="when">&middot; Feb &ndash; Aug 2026</span></p>
-          <h3>Working with people</h3>
-          <p class="story">Next I wanted AI to work with people and make real things for them. At Intent I built an agent that builds 3D worlds on its own: it composes the scene, lighting, materials and camera moves in Blender, checks its own renders and fixes them, and turns a product into a finished ad video that customers pay for. I also built a team agent for group chats, one shared teammate anyone can @, and the runtime that lets agents survive crashes on day-long tasks.</p>
-          <ul class="tags"><li>Agentic 3D</li><li>Multiplayer agents</li><li>Durable runtime</li></ul>
-        </div>
-      </li>
-      <li class="ch">
-        <span class="node" aria-hidden="true"><span class="n">3</span></span>
-        <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
-        <div class="txt">
-          <p class="chip">03 &middot; <a href="https://evolvent.co/en">Evolvent AI</a> <span class="when">&middot; May 2026 &ndash; now</span></p>
-          <h3>Worlds that can&rsquo;t be fooled</h3>
-          <p class="story">Then the bigger question: can agents improve AI itself? That starts with data and environments a model can&rsquo;t fool. At Evolvent AI I architected our agentic data engine: author agents build executable tasks, programs decide pass or fail, and reviewer agents hunt for reward hacking, shipping post-training data to ByteDance, Qwen and GLM. I built three environments that check what actually happens, not what looks right: a 3D asset-repair benchmark in Blender, an RL sandbox where agents rebuild playable levels from screenshots, and a GameDev benchmark where coding agents ship whole Godot games. Top AI companies bought all three. On top of that I co-lead <a href="https://github.com/evolvent-ai/RSIGym">RSIGym</a>, where frontier agents run AI research end to end, and work on <a href="https://github.com/evolvent-ai/RSIBench-Data">RSIBench-Data</a> and <a href="https://github.com/evolvent-ai/Godel-Forest">G&ouml;del Forest</a>.</p>
-          <ul class="tags"><li>Agentic data</li><li>RL environments &amp; evals</li><li>Self-improving agents</li></ul>
-        </div>
-      </li>
-      <li class="ch">
-        <span class="node" aria-hidden="true"><span class="n">4</span></span>
-        <figure class="dio"><canvas aria-hidden="true"></canvas></figure>
-        <div class="txt">
-          <p class="chip">04 &middot; Columbia University <span class="when">&middot; New York</span></p>
-          <h3>Now</h3>
-          <p class="story">Now I am in New York for an M.S. in Computer Science at <a href="https://www.columbia.edu/">Columbia</a>, after a B.S. at <a href="https://shanghai.nyu.edu/">NYU Shanghai</a>. Next I want to build this at a frontier lab: the data, environments and evals that let AI agents improve AI systems.</p>
-          <ul class="tags"><li>Research infrastructure</li><li>RL for agents</li><li>Frontier labs next</li></ul>
+          <p class="chip">Recursive <span class="nw">self-improvement</span> <span class="when">&middot; co-lead</span></p>
+          <h3>Agents that run AI research</h3>
+          <p class="story"><a href="https://arxiv.org/abs/2610.10310">RSIGym</a> (<a href="https://github.com/evolvent-ai/RSIGym">code</a>), which I co-lead, hands a frontier agent a base model and a budget and asks it to do research end to end: synthesize data, train with LoRA, evaluate in sandboxes, then do it again with what it learned. I co-designed RSI-Index, our score for how much of the remaining gap an agent actually closes. <a href="https://arxiv.org/abs/2607.25886">RSIBench-Data</a> (<a href="https://github.com/evolvent-ai/RSIBench-Data">code</a>) casts agents as post-training data researchers. <a href="https://arxiv.org/abs/2609.36675">G&ouml;del Forest</a> (<a href="https://github.com/evolvent-ai/Godel-Forest">code</a>) runs parallel agents that <span class="nw">co-evolve</span> by passing each other short lessons instead of repeating each other&rsquo;s mistakes. The finding I keep coming back to: agents improve fast, but they don&rsquo;t know when to stop. Teaching them when to stop is what I want to solve next.</p>
+          <ul class="tags"><li>RSIGym &amp; RSI-Index</li><li>RSIBench-Data</li><li>G&ouml;del Forest</li></ul>
         </div>
       </li>
     </ol>
   </div>
 </section>
 
+<section class="sec" id="envs" aria-labelledby="envsh">
+  <div class="wrap">
+    <header class="sh">
+      <div><p class="eyebrow">RL environments &amp; game dev</p><h2 id="envsh">RL environments &amp; <em>game dev</em></h2></div>
+      <p class="lead">Worlds that push back. Three environments I built at Evolvent, each one a small game that checks what actually happens, not what looks right. Top AI companies bought all three.</p>
+    </header>
+    <ol class="run">
+      <li class="ch">
+        <figure class="dio" data-stage="mesh"><div class="frame"><canvas aria-hidden="true"></canvas></div><figcaption><span>Asset repair</span><span class="st">illustrative</span></figcaption></figure>
+        <div class="txt">
+          <p class="chip">3D asset-repair benchmark <span class="when">&middot; Blender</span> <span class="when">&middot; bought by 3 top AI companies</span></p>
+          <h3>Fix the mesh. Don&rsquo;t delete it.</h3>
+          <p class="story">The agent gets a production mesh that I broke on purpose: a hole in the geometry, UVs stacked on top of each other, a pivot in the wrong place, a collider that no longer matches, and often several of these at once. Its job is to repair it inside Blender until a real game engine would accept it. No model grades the result. Dozens of programmatic checks run instead, including a headless Godot import, plus a Hausdorff-distance bound against the original mesh, so the fastest fix of all, deleting the broken part, counts as a failure. Models handle one defect well. Give them two that interact and they fall apart. Retopology is the classic trap: it quietly destroys the UVs it was supposed to leave alone.</p>
+          <ul class="tags"><li>Stacked defects</li><li>Headless Godot import</li><li>No delete-to-pass</li></ul>
+        </div>
+      </li>
+      <li class="ch">
+        <figure class="dio" data-stage="level"><div class="frame"><canvas aria-hidden="true"></canvas></div><figcaption><span>Level reconstruction</span><span class="st">illustrative</span></figcaption></figure>
+        <div class="txt">
+          <p class="chip">3D level-reconstruction RL sandbox <span class="when">&middot; Godot</span> <span class="when">&middot; bought by 3 top AI companies</span></p>
+          <h3>Looks beatable. Isn&rsquo;t.</h3>
+          <p class="story">The agent sees a handful of screenshots of a 3D platformer, from one to six, and has to rebuild the level so a player could finish it. I generate levels path first: a reachable route comes first, then the platforms, obstacles and occlusion around it, so every level is solvable and the curriculum never runs out. Half the reward is how well the layout matches. The other half is a navmesh bot that actually tries to play the rebuild, and that is where the surprises live. Plenty of rebuilds look nearly perfect and cannot be beaten: a gap a hair too wide, a ledge a little too high. Agents also tried to cheat. One carpeted the whole floor with platforms; another put the goal next to the spawn. Those hacks are closed now, by an isolated verifier and checks the agent never sees. The whole sandbox runs on CPUs, cheap and massively parallel.</p>
+          <ul class="tags"><li>Path-first generator</li><li>Navmesh playtest</li><li>Hidden checks</li></ul>
+        </div>
+      </li>
+      <li class="ch">
+        <figure class="dio" data-stage="gamedev"><div class="frame"><canvas aria-hidden="true"></canvas></div><figcaption><span>GameDev benchmark</span><span class="st">illustrative</span></figcaption></figure>
+        <div class="txt">
+          <p class="chip">Agentic GameDev benchmark <span class="when">&middot; Godot 4</span> <span class="when">&middot; bought by top AI companies</span></p>
+          <h3>Ship a whole game from a spec</h3>
+          <p class="story">A coding agent gets a gameplay spec and nothing else, and has to deliver a complete, runnable Godot 4 3D game. I score it on Mechanics, Depth, Visuals and Art. The hard part was making those scores trustworthy. An agent-written adapter binds the rubric to each project&rsquo;s live runtime state, so fixed tests can check that a raycast actually hits, a collision actually fires, a resource actually settles. A VLM watches recordings of the gameplay, and its verdicts are cross-checked against that state. The rubrics were calibrated on hidden reference games. What I found: games look right but don&rsquo;t play right. The screenshots are gorgeous; the hero walks straight through the wall. Mechanics are by far the weakest thing agents produce.</p>
+          <ul class="tags"><li>Runtime-bound rubric</li><li>VLM cross-checked</li><li>Hidden reference games</li></ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="before" aria-labelledby="beforeh">
+  <div class="wrap">
+    <header class="sh">
+      <div><p class="eyebrow">Before Evolvent</p><h2 id="beforeh">Earlier <em>work</em></h2></div>
+      <p class="lead">Two internships that taught me how agents make real things for people, and how machines read.</p>
+    </header>
+    <div class="bf">
+      <article class="bfi">
+        <figure class="dio" data-stage="chat" data-max="3"><div class="frame"><canvas aria-hidden="true"></canvas></div><figcaption><span>The group chat</span><span class="st">illustrative</span></figcaption></figure>
+        <p class="chip"><a href="https://intent.app/">Intent</a> <span class="when">&middot; Feb &ndash; Aug 2026</span></p>
+        <h3>Agents that make things for people</h3>
+        <p class="story">I built an agent that makes 3D worlds on its own. From a product&rsquo;s 3D model and an ad brief, it composes the scene, lighting, materials and camera moves in Blender, checks its own renders, fixes what is wrong, and delivers a finished ad video that customers pay for. I also shipped a shared team agent that anyone in a group chat can @, and the crash-safe runtime that keeps day-long agent tasks alive.</p>
+      </article>
+      <article class="bfi">
+        <figure class="dio" data-stage="reading" data-max="3"><div class="frame"><canvas aria-hidden="true"></canvas></div><figcaption><span>The reading room</span><span class="st">illustrative</span></figcaption></figure>
+        <p class="chip"><a href="https://www.dp.tech/en">DP Technology</a> <span class="when">&middot; Mar 2025 &ndash; Feb 2026</span></p>
+        <h3>Teaching machines to read science</h3>
+        <p class="story">On the <a href="https://uni-parser.github.io/">Uni-Parser</a> team I scaled the inference system that turns papers and patents, with their tables, formulas and molecules, into training corpora for models. I also co-designed <a href="https://huggingface.co/UniParser/MolParser-Mobile">MolParser-Mobile</a>, a tiny, fast model that reads molecule drawings, and ran its whole training recipe end to end, from pretraining through distillation to DPO.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="work" aria-labelledby="workh">
-  <div class="wrap inv">
-    <p class="eyebrow">Inventory</p>
-    <h2 id="workh">Selected work</h2>
-    <p class="lead">Papers, code and the projects behind the chapters.</p>
-    <div class="grp">
-      <h3><canvas class="cameo" data-cameo="robot" aria-hidden="true"></canvas>Evolvent AI &middot; data, environments &amp; self-improvement</h3>
-      <ul class="items">
+  <div class="wrap">
+    <header class="sh">
+      <div><p class="eyebrow">Index</p><h2 id="workh">Selected <em>work</em></h2></div>
+      <p class="lead">Papers, code and projects.</p>
+    </header>
+    <div class="grp feat">
+      <div class="gh"><canvas class="cameo" data-cameo="robot" aria-hidden="true"></canvas><h3>Evolvent <em>AI</em></h3><p class="gsub">Data, environments &amp; self-improvement <span class="nw">&middot; May 2026 &ndash; now</span></p></div>
+      <ol class="items">
         <li class="it"><span class="n">Agentic Data Engine</span><span class="d">Verified post-training data for ByteDance, Qwen and GLM</span></li>
-        <li class="it"><span class="n">3D Asset-Repair Benchmark</span><span class="d">Agents fix broken meshes into game-ready assets in Blender</span><span class="v">Bought by 3 top AI companies</span></li>
-        <li class="it"><span class="n">3D Level RL Sandbox</span><span class="d">Rebuild a playable level from screenshots</span><span class="v">Bought by 3 top AI companies</span></li>
-        <li class="it"><span class="n">Agentic GameDev Benchmark</span><span class="d">Coding agents ship whole Godot games from a spec</span><span class="v">Bought by top AI companies</span></li>
-        <li class="it"><span class="n">RSIGym</span><span class="d">Where agents run AI research end to end</span><span class="links"><a href="https://arxiv.org/abs/2610.10310">Paper</a><a href="https://github.com/evolvent-ai/RSIGym">Code</a></span></li>
+        <li class="it"><span class="n">RSIGym</span><span class="d">Agents run AI research end to end</span><span class="links"><a href="https://arxiv.org/abs/2610.10310">Paper</a><a href="https://github.com/evolvent-ai/RSIGym">Code</a></span></li>
         <li class="it"><span class="n">RSIBench-Data</span><span class="d">Agents as post-training data researchers</span><span class="links"><a href="https://arxiv.org/abs/2607.25886">Paper</a><a href="https://github.com/evolvent-ai/RSIBench-Data">Code</a></span></li>
         <li class="it"><span class="n">G&ouml;del Forest</span><span class="d">Co-evolving agents that share lessons</span><span class="links"><a href="https://arxiv.org/abs/2609.36675">Paper</a><a href="https://github.com/evolvent-ai/Godel-Forest">Code</a></span></li>
-      </ul>
+        <li class="it"><span class="n">3D Asset-Repair Benchmark</span><span class="d">Fix broken meshes into game-ready assets in Blender</span><span class="v">Bought by 3 top AI companies</span></li>
+        <li class="it"><span class="n">3D Level RL Sandbox</span><span class="d">Rebuild a beatable level from screenshots</span><span class="v">Bought by 3 top AI companies</span></li>
+        <li class="it"><span class="n">Agentic GameDev Benchmark</span><span class="d">Ship a runnable Godot game from a spec</span><span class="v">Bought by top AI companies</span></li>
+      </ol>
     </div>
     <div class="grp">
-      <h3><canvas class="cameo" data-cameo="bot" aria-hidden="true"></canvas>Intent &middot; agent systems</h3>
-      <ul class="items">
-        <li class="it"><span class="n">Agentic 3D Ad Generation</span><span class="d">An agent builds the 3D scene and renders the ad video</span><span class="v">Commercialized</span></li>
+      <div class="gh"><canvas class="cameo" data-cameo="bot" aria-hidden="true"></canvas><h3>Intent</h3><p class="gsub">Agent systems <span class="nw">&middot; Feb &ndash; Aug 2026</span></p></div>
+      <ol class="items">
+        <li class="it"><span class="n">Agentic 3D Ad Generation</span><span class="d">An agent builds the scene in Blender and renders the ad</span><span class="v">Commercialized</span></li>
         <li class="it"><span class="n">Team Agent</span><span class="d">One shared teammate any group-chat member can @</span></li>
         <li class="it"><span class="n">Durable Agent Runtime</span><span class="d">Crash-safe execution for day-long agent tasks</span></li>
-      </ul>
+      </ol>
     </div>
     <div class="grp">
-      <h3><canvas class="cameo" data-cameo="reader" aria-hidden="true"></canvas>DP Technology &middot; Uni-Parser team</h3>
-      <ul class="items">
+      <div class="gh"><canvas class="cameo" data-cameo="reader" aria-hidden="true"></canvas><h3>DP Technology</h3><p class="gsub">Uni-Parser team <span class="nw">&middot; Mar 2025 &ndash; Feb 2026</span></p></div>
+      <ol class="items">
         <li class="it"><span class="n">Uni-Parser</span><span class="d">Science documents into training corpora</span><span class="links"><a href="https://arxiv.org/abs/2512.15098">Paper</a><a href="https://uni-parser.github.io/">Site</a></span></li>
         <li class="it"><span class="n">MolParser-Mobile</span><span class="d">Tiny, fast molecule recognition</span><span class="links"><a href="https://arxiv.org/abs/2609.05807">Paper</a><a href="https://huggingface.co/UniParser/MolParser-Mobile">Model</a></span></li>
-      </ul>
+      </ol>
     </div>
     <div class="grp">
-      <h3><canvas class="cameo" data-cameo="bot" aria-hidden="true"></canvas>Research</h3>
-      <ul class="items">
+      <div class="gh"><canvas class="cameo" data-cameo="bot" aria-hidden="true"></canvas><h3>Research</h3><p class="gsub">Papers</p></div>
+      <ol class="items">
         <li class="it"><span class="n">CrashGym</span><span class="d">Do agents&rsquo; experiments improve crash interventions?</span><span class="v">NeurIPS 2026 Agenthon Workshop</span><span class="links"><a href="https://arxiv.org/abs/2610.29245">Paper</a></span></li>
         <li class="it"><span class="n">Hard-Negative DPO</span><span class="d">Verifier-guided preference pairs</span><span class="links"><a href="https://arxiv.org/abs/2512.19728">Paper</a></span></li>
-      </ul>
+      </ol>
     </div>
   </div>
 </section>
 
 <section class="sec" id="contact" aria-labelledby="coh">
-  <div class="cont">
-    <canvas id="save" aria-hidden="true"></canvas>
-    <div>
-      <p class="eyebrow">Save point</p>
-      <h2 id="coh">Continue?</h2>
-      <p class="lead">If you are building the systems that let AI improve AI, I would love to be on that team. Say hello.</p>
+  <div class="wrap">
+    <div class="strip"><canvas id="save" aria-hidden="true"></canvas></div>
+    <div class="cont">
+      <div>
+        <p class="eyebrow">Save point &middot; now</p>
+        <h2 id="coh">Continue<em>?</em></h2>
+        <p class="lead">I am in New York for an M.S. in Computer Science at <a href="https://www.columbia.edu/">Columbia</a>, after a B.S. at <a href="https://shanghai.nyu.edu/">NYU Shanghai</a>. Next I want to build this at a frontier lab: the data, environments and evals that let AI agents improve AI. If that is what you are building, say hello.</p>
+      </div>
       <ul class="menu">
-        <li><span class="cur" aria-hidden="true"></span><span class="email" id="email">hl4072@columbia.edu</span><button class="pbtn" id="copy" type="button">Copy</button><span class="copied" id="copied" aria-live="polite"></span></li>
-        <li><span class="cur" aria-hidden="true"></span><a class="pbtn res" href="Jason_Lu_Resume.pdf"><svg class="ico" viewBox="0 0 10 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#211a30" d="M1 0h6v1h1v1h1v10H1z"/><path fill="#fffaf0" d="M2 1h5v2h1v8H2z"/><path fill="#211a30" d="M3 4h4v1H3zm0 2h4v1H3zm0 2h3v1H3z"/></svg>Resume &middot; PDF<span class="tagx">1 page</span></a></li>
-        <li><span class="cur" aria-hidden="true"></span><a class="big2" href="https://github.com/HaochengLu">GitHub</a></li>
-        <li><span class="cur" aria-hidden="true"></span><a class="big2" href="https://www.linkedin.com/in/haocheng-lu-131920275/">LinkedIn</a></li>
+        <li><span class="email" id="email">hl4072@columbia.edu</span><span class="row"><button class="btn sm cp" id="copy" type="button" data-copy="hl4072@columbia.edu">Copy</button><span class="copied" id="copied" data-copied aria-live="polite"></span></span></li>
+        <li class="row"><a class="btn primary" href="Jason_Lu_Resume.pdf"><svg class="ico" viewBox="0 0 10 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M1 0h6v1h1v1h1v10H1z"/><path fill="var(--btn)" d="M2 1h5v2h1v8H2z"/><path fill="currentColor" d="M3 4h4v1H3zm0 2h4v1H3zm0 2h3v1H3z"/></svg>Resume <span class="pg">&middot; PDF, 1 page</span></a><a class="btn" href="https://github.com/HaochengLu">GitHub</a><a class="btn" href="https://www.linkedin.com/in/haocheng-lu-131920275/">LinkedIn</a></li>
+        <li><p class="based">Based in New York.</p></li>
       </ul>
-      <p class="based">Based in New York.</p>
     </div>
   </div>
 </section>
@@ -561,7 +747,7 @@ function mix(a,b,t){const A=hex(a),B=hex(b);return'#'+A.map((v,i)=>Math.round(v+
 /* ================= PALETTES ================= */
 const CH={o:'#1d1628',m:'#eef1f7',M:'#a9b2c7',d:'#22263d',a:'#5ff0d9',A:'#2fb5a3',y:'#ffd36e',t:'#e06a55'};
 const ENV={
- day:{ink:'#2b2236',sky:['#7dbfe0','#97cde6','#b2dbe6','#cbe6e2','#e1edda','#f2ead0'],sky4:['#5f5698','#8263a2','#b06d9e','#d98197','#efa08b','#f7c393'],
+ day:{ink:'#2b2236',sky:['#5ea9d9','#7fbde1','#9fd0e6','#c0e0e5','#dde9d9','#f3e7cb'],sky4:['#5f5698','#8263a2','#b06d9e','#d98197','#efa08b','#f7c393'],
   star:'#ffffff',lum:'#fff6dc',lumR:'#fbe6b4',cloud:'#ffffff',cloudS:'#e4f0f3',cloudD:'#c3dbe3',
   f1:'#b6cfd9',f2:'#a3c0cc',fw:'#d0e2e7',f4:'#9a7fae',f4b:'#86709f',f4w:'#f8d9a3',
   m1:'#f1e6d0',m2:'#ddcfb4',m3:'#c4b394',m4:'#a99778',mr:'#d27f64',mR:'#ad6150',mt:'#fbf6ea',mw:'#8fb7c6',mW:'#bcd9e2',
@@ -755,77 +941,234 @@ function stage2(a,sc){const on=a>0;
   if(bx!==null)ctx.drawImage(BOTB[0],bx-5,by);
 }
 
-function stage3(a,sc){const on=a>0,live=on&&!reduced;
-  R(ctx,0,0,VW,GY,P.me);for(let x=12;x<VW;x+=24)R(ctx,x,0,1,GY,P.mE);R(ctx,0,30,VW,1,P.mE);R(ctx,0,31,VW,1,P.mH);
-  for(let x=4;x<VW;x+=40){R(ctx,x,0,24,3,P.mK);R(ctx,x+1,1,22,1,on?'#ffffff':P.mE)}
-  // wall monitor
-  box(ctx,54,8,34,20,P.night?'#0c1f22':'#1d3135',P.ink,null,null);
-  if(on){for(let i=0;i<5;i++){const l=3+((i*7+Math.floor(tt*2))%14);R(ctx,57,11+i*3,Math.min(26,l),1,i%2?P.cy:P.cY)}}else for(let i=0;i<5;i++)R(ctx,57,11+i*3,6+(i*5)%12,1,P.mK);
-  R(ctx,70,28,2,4,P.mK);
-  rack(2,on,tt*3);rack(19,on,tt*3+1);rack(142,on,tt*3+2);
-  R(ctx,0,GY,VW,VH-GY,P.mE);R(ctx,0,GY,VW,1,P.mH);for(let y=GY+3;y<VH;y+=3)R(ctx,0,y,VW,1,P.mK);for(let x=0;x<VW;x+=8)R(ctx,x,GY+1,1,VH-GY,P.mK);
-  // the loop
-  const cx=104,cy=GY-8,rx=33,ry=6;
-  for(let yy=-ry-2;yy<=ry+2;yy++){const hw=Math.round((rx+3)*Math.sqrt(Math.max(0,1-(yy*yy)/((ry+2)*(ry+2)))));R(ctx,cx-hw,cy+yy,hw*2,1,yy>ry-1?P.mK:P.me)}
-  const lit=Math.floor(clamp((a-.1)/.7,0,1)*12+.001);for(let k=0;k<96;k++){const an=k/96*Math.PI*2;const on2=Math.floor(k/8)<lit;const run=on2&&a>=1&&live&&((k+Math.floor(tt*24))%12<4);R(ctx,Math.round(cx+Math.cos(an)*rx),Math.round(cy+Math.sin(an)*ry),1,1,run?P.cH:on2?P.cy:P.mK)}
-  lever(50,clamp((a-.04)/.36,0,1));station(82,'TRAIN',a>.3,a>=1&&live&&Math.floor(tt*2)%2===0);station(128,'EVAL',a>.5,a>=1&&live&&Math.floor(tt*2)%2===1);
-  const N=5,list=[];const m=live?1:0;
-  for(let i=0;i<N;i++){const r=rng(90+i);const ord=a>=.12+.6*(i+1)/(N+1);const an=tt*.8*m+i/N*Math.PI*2;
-    const x=ord?cx+Math.cos(an)*rx:cx+Math.sin(tt*(1.7+r())*m+i*2)*rx*.7+Math.sin(tt*5.3*m+i)*3+(m?0:(i-2)*12),y=ord?cy+Math.sin(an)*ry:cy+Math.cos(tt*(2.1+r())*m+i)*ry*.8+(m?0:(i%2?2:-3));list.push([x,y,i,ord?(-Math.sin(an)>0?1:0):(i%2)])}
-  const rob=([x,y,i,dir])=>{const bob=live?Math.round(Math.sin(tt*8+i)*.6):0;ctx.drawImage(ROBB[i][dir],Math.round(x)-6,Math.round(y)-13+bob)};
-  list.filter(r=>r[1]<cy).forEach(rob);
-  if(on&&a<.9&&live){for(let i=0;i<4;i++){const ph=(tt*3+i*.37)%1;if(ph<.3){const sx=cx-26+((i*23+Math.floor(tt*3)*13)%52),sy=cy-14-((i*7)%8);R(ctx,sx,sy,1,1,P.am);R(ctx,sx-1,sy+1,3,1,P.am);R(ctx,sx,sy+2,1,1,P.am)}}}
-  list.filter(r=>r[1]>=cy).forEach(rob);
-  const jx=36,tier=0;let pose='idle',fi=idleFi();if(a>.04&&a<.42){pose='lever';fi=a<.14?0:a<.26?1:2}
-  jason(jx,tier,pose,fi,false,{expr:a>.04&&a<.42?'det':a>=.85?'proud':''});
-  ctx.drawImage(BOTB[0],jx-15,GY-52+(live?[0,-1,-1,0][Math.floor(tt*6)%4]:0));
+
+/* ================= NEW SCENES (160 x 100, ground 84) ================= */
+Object.assign(F3,{P:"111101111100100",M:"101111111101101",U:"101101101101111",W:"101101101111101",K:"101101110101101",X:"101101010101101",Z:"111001010100111",
+ 0:"111101101101111",5:"111100111001111",6:"111100111101111",7:"111001001001001",8:"111101111101111",9:"111101111001111","?":"111001011000010","!":"010010010000010",".":"000000000000010","-":"000000111000000",":":"000010000010000"});
+const ltime=(sc,fix)=>reduced?fix:(sc.lit?Math.max(0,tt-sc.litAt/1000-.4):0);
+const frac=v=>v-Math.floor(v);
+const RED=()=>P.night?'#ff6b5c':'#d8402f',GRN=()=>P.night?'#8fe07a':'#3f9e3a',YEL=()=>P.night?'#ffd36e':'#e0a221';
+function tick(x,y,c){R(ctx,x,y+2,1,1,c);R(ctx,x+1,y+3,1,1,c);R(ctx,x+2,y+2,1,1,c);R(ctx,x+3,y+1,1,1,c);R(ctx,x+4,y,1,1,c)}
+function xmark(x,y,c){for(let i=0;i<4;i++){R(ctx,x+i,y+i,1,1,c);R(ctx,x+3-i,y+i,1,1,c)}}
+function tag(x,y,s,fg,bg){const w=txt3w(s)+4;R(ctx,x-1,y-1,w+2,9,P.ink);R(ctx,x,y,w,7,bg);txt3(ctx,s,x+2,y+1,fg);return w}
+function stamp(x,y,s,col){const w=txt3w(s)+6;R(ctx,x-1,y-1,w+2,11,P.ink);R(ctx,x,y,w,9,col);R(ctx,x+1,y+1,w-2,7,P.ink);txt3(ctx,s,x+3,y+2,col)}
+function panel(x,y,w,h,title){box(ctx,x,y,w,h,P.night?'#0d1526':'#1a2635',P.ink,null,null);if(title){R(ctx,x+1,y+1,w-2,7,P.night?'#1e2a48':'#2d3f58');txt3(ctx,title,x+3,y+2,P.cH);R(ctx,x+w-4,y+3,2,2,P.co)}}
+function labWall(){R(ctx,0,0,VW,GY,P.me);for(let x=12;x<VW;x+=24)R(ctx,x,0,1,GY,P.mE);R(ctx,0,34,VW,1,P.mE);R(ctx,0,35,VW,1,P.mH);
+  R(ctx,0,GY,VW,VH-GY,P.mE);R(ctx,0,GY,VW,1,P.mH);for(let y=GY+3;y<VH;y+=3)R(ctx,0,y,VW,1,P.mK);for(let x=0;x<VW;x+=8)R(ctx,x,GY+1,1,VH-GY,P.mK)}
+function belt(x0,x1,y,t){R(ctx,x0,y,x1-x0,5,P.mK);R(ctx,x0,y,x1-x0,1,P.mH);R(ctx,x0,y+4,x1-x0,1,P.ink);const off=Math.floor(t*10)%6;for(let x=x0+off;x<x1-1;x+=6)R(ctx,x,y+2,2,1,P.mH);R(ctx,x0,y,1,5,P.ink);R(ctx,x1-1,y,1,5,P.ink);for(let x=x0+4;x<x1-3;x+=24)R(ctx,x,y+5,2,GY-y-5,P.mK)}
+function crate(x,y,col,hi){R(ctx,x,y,7,7,P.ink);R(ctx,x+1,y+1,5,5,col);R(ctx,x+1,y+1,5,1,hi);R(ctx,x+3,y+2,1,3,mix(col,P.ink,.3))}
+function rob(i,x,y,dir,bob){ctx.drawImage(ROBB[i][dir?1:0],Math.round(x)-6,Math.round(y)-14+(bob||0))}
+function bobv(t,k){return Math.round(Math.sin(t*8+(k||0))*.6)}
+function sparks(x,y,t,n,col){for(let i=0;i<(n||4);i++){const ph=frac(t*2+i/(n||4));const sx=x+Math.round(Math.cos(i*2.1+t)*(2+ph*6)),sy=y-Math.round(ph*7);R(ctx,sx,sy,1,1,ph<.6?(col||P.am):'#ffffff')}}
+function compBot(x,y,live,t){ctx.drawImage(BOTB[0],x,y+(live?[0,-1,-1,0][Math.floor(t*6)%4]:0))}
+
+/* --- main line: data -> world -> agent -> data --- */
+function stageLine(a,sc){const t=ltime(sc,2.6),live=sc.lit&&!reduced;labWall();
+  const on1=a>.04,on2=a>.3,on3=a>.56,on4=a>.82;
+  // return pipe over the top: agent output flows back into the data rack
+  const py=10;R(ctx,16,py,124,3,P.mK);R(ctx,16,py,124,1,P.mH);R(ctx,16,py,3,30,P.mK);R(ctx,137,py,3,24,P.mK);R(ctx,16,py,1,30,P.mH);R(ctx,137,py,1,24,P.mH);
+  R(ctx,14,py+30,7,2,P.ink);R(ctx,135,py+24,7,2,P.ink);
+  if(on4){for(let i=0;i<7;i++){const u=frac((live?t*.35:.1)+i/7);let x,y;if(u<.2){x=138;y=py+26-u/.2*14}else if(u<.85){x=138-(u-.2)/.65*120;y=py+1}else{x=18;y=py+2+(u-.85)/.15*26}R(ctx,Math.round(x),Math.round(y),2,2,i%2?P.am:P.cH)}}
+  // DATA rack
+  box(ctx,2,GY-38,28,39,P.mK,P.ink,P.mE,null);for(let s=0;s<3;s++){const sy=GY-33+s*11;R(ctx,4,sy+8,24,2,P.mE);for(let k=0;k<3;k++){const lit=on1&&(s*3+k)<(on4?9:Math.floor(a/.3*9));crate(4+k*8,sy,lit?P.cy:P.mE,lit?P.cH:P.mH)}}
+  tag(6,GY-48,'DATA',on1?P.cH:P.mK,P.ink);
+  // WORLD gate
+  const gx=66,gw=32;R(ctx,gx,GY-44,5,44,P.mK);R(ctx,gx+gw-5,GY-44,5,44,P.mK);R(ctx,gx,GY-44,1,44,P.mH);R(ctx,gx+gw-5,GY-44,1,44,P.mH);R(ctx,gx-2,GY-48,gw+4,6,P.mK);R(ctx,gx-2,GY-48,gw+4,1,P.mH);
+  for(let y=GY-40;y<GY;y+=4)for(let x=gx+5+((y/4|0)%2)*4;x<gx+gw-5;x+=8)R(ctx,x,y,4,4,P.night?'#1d2150':'#c9d3dc');
+  tag(gx+5,GY-57,'WORLD',on2?P.cH:P.mK,P.ink);
+  // AGENT platform
+  R(ctx,116,GY-6,32,6,P.mK);R(ctx,116,GY-6,32,1,P.mH);tag(118,GY-48,'AGENT',on3?P.cH:P.mK,P.ink);
+  // belt and items
+  const by=GY-8;belt(28,118,by,live?t:0);
+  const N=5,T=7;let absorb=0,gateLit=0;
+  for(let i=0;i<N;i++){const u=frac(t/T+i/N),lap=Math.floor(t/T+i/N);const ok=((i+lap)%4)!==2;const x=Math.round(lerp(28,116,u));let y=by-7;
+    const inGate=x>gx+4&&x<gx+gw-5;if(!ok&&x>gx+16){const d=(x-gx-16);y+=Math.round(d*d*.35);if(y>VH)continue}
+    if(inGate&&x>gx+12&&x<gx+20)gateLit=ok?1:2;
+    if(x>=108&&ok){absorb=1;if(x>112)continue}
+    if(!on2&&x>gx+4)continue;
+    const col=x<gx+12?P.cy:ok?GRN():RED();crate(x-3,y,col,ok?mix(col,'#ffffff',.4):col);if(ok&&x>gx+18&&x<112)tick(x-2,y-6,GRN())}
+  // gate lamp
+  const lc=gateLit===1?GRN():gateLit===2?RED():on2?P.am:P.mK;R(ctx,gx+gw/2-2,GY-47,4,3,lc);if(gateLit)R(ctx,gx+gw/2-3,GY-48,6,5,lc);
+  // the agent
+  rob(2,132,GY-6,0,live?bobv(t):0);if(on3&&absorb){for(let k=0;k<8;k++){const an=k/8*Math.PI*2+t*4;R(ctx,132+Math.round(Math.cos(an)*9),GY-14+Math.round(Math.sin(an)*4),1,1,k%2?P.am:P.cH)}}
+  if(on3&&live)R(ctx,131,GY-24+Math.round(Math.sin(t*3)*1.5),2,2,P.am);
+  jason(47,0,'idle',idleFi(),false,{expr:on4?'proud':on1?'focus':''});compBot(34,GY-58,live,t);
 }
 
-function stage4(a,sc,dt){const on=a>0,live=on&&!reduced;
-  bands(ctx,P.night?P.sky:P.sky4,0,GY,VW);
-  if(P.night){const r=rng(3);for(let i=0;i<26;i++){const x=r()*VW|0,y=r()*50|0,tw=r()*8;if(!live||Math.floor(tt*2+tw)%7)R(ctx,x,y,1,1,P.star)}}
-  disc(90,16,6,P.lum,P.lumR,P.night);
-  if(!P.night){cloud(16+(live?(tt*1.5)%40:0),18,26,1);cloud(70,30,20,1)}
-  // skyline
-  const r=rng(14);for(let x=0;x<VW;){const w=6+(r()*10|0),h=12+(r()*26|0);R(ctx,x,GY-h,w,h,P.f4);R(ctx,x+w-1,GY-h,1,h,P.f4b);for(let y=GY-h+3;y<GY-3;y+=3)for(let i=x+2;i<x+w-2;i+=2)if(r()<(P.night?.3:.08))R(ctx,i,y,1,1,P.f4w);x+=w+(r()*2|0)}
-  const es=150;R(ctx,es-5,GY-46,11,46,P.f4);R(ctx,es-3,GY-54,7,8,P.f4);R(ctx,es-2,GY-60,5,6,P.f4);R(ctx,es-1,GY-64,3,4,P.f4);R(ctx,es,GY-72,1,8,P.f4);R(ctx,es+5,GY-46,1,46,P.f4b);
-  // Low Library
-  const x0=6,cxd=x0+36;
-  R(ctx,x0+4,GY-38,64,4,P.m2);R(ctx,x0+4,GY-39,64,1,P.ink);R(ctx,x0+4,GY-34,64,1,P.m3);
-  R(ctx,x0+14,GY-45,44,6,P.m1);R(ctx,x0+13,GY-46,46,1,P.ink);R(ctx,x0+13,GY-45,1,6,P.ink);R(ctx,x0+58,GY-45,1,6,P.ink);
-  R(ctx,x0+22,GY-51,28,6,P.m2);R(ctx,x0+21,GY-52,30,1,P.ink);for(let i=0;i<6;i++)R(ctx,x0+24+i*4,GY-50,1,4,P.m3);
-  const rd=15;for(let y=0;y<=rd;y++){const hw=Math.round(Math.sqrt(rd*rd-y*y));R(ctx,cxd-hw-1,GY-52-y,hw*2+2,1,P.ink);R(ctx,cxd-hw,GY-52-y,hw*2,1,y>rd-3?P.mE:P.me);R(ctx,cxd-hw,GY-52-y,Math.max(1,Math.round(hw*.5)),1,P.mH)}
-  for(let k=1;k<4;k++){const yy=GY-52-k*4;const hw=Math.round(Math.sqrt(rd*rd-(k*4)**2));R(ctx,cxd-hw,yy,hw*2,1,P.mE)}
-  R(ctx,cxd-2,GY-71,4,4,P.m1);R(ctx,cxd-3,GY-72,6,1,P.ink);R(ctx,cxd,GY-75,1,3,P.ink);
-  box(ctx,x0+6,GY-34,60,26,P.m1,P.ink,P.mt,P.m3);R(ctx,x0+10,GY-31,52,20,P.night?'#1a1a40':P.m4);
-  for(let i=0;i<9;i++){const c=x0+11+i*6;R(ctx,c,GY-31,3,20,P.mt);R(ctx,c+2,GY-31,1,20,P.m3);R(ctx,c-1,GY-32,5,1,P.m2);R(ctx,c-1,GY-12,5,1,P.m2)}
-  if(on&&P.night)for(let i=0;i<8;i++)R(ctx,x0+15+i*6,GY-24,1,6,P.mw);
-  R(ctx,x0,GY-8,72,3,P.m2);R(ctx,x0-2,GY-5,76,3,P.m1);R(ctx,x0-4,GY-2,80,2,P.m2);R(ctx,x0,GY-8,72,1,P.mt);R(ctx,x0-2,GY-5,76,1,P.mt);
-  // brick walk
-  R(ctx,0,GY,VW,VH-GY,P.br);R(ctx,0,GY,VW,1,P.bH);for(let y=GY+3;y<VH;y+=3)R(ctx,0,y,VW,1,P.bR);for(let y=GY+1,k=0;y<VH;y+=3,k++)for(let x=(k%2)*4;x<VW;x+=8)R(ctx,x,y,1,2,P.bR);
-  // the lab he builds
-  const lx=106,LW=36,FL=7,FH=9;R(ctx,lx-3,GY-3,LW+6,3,P.ink);R(ctx,lx-2,GY-3,LW+4,1,P.mH);
-  const placed=a>=.4,up=clamp((a-.42)/.4,0,1),nF=placed?Math.floor(up*FL+.001):0,done=a>=.85;
-  for(let i=0;i<nF;i++){const y=GY-3-(i+1)*FH;const w=LW-(i>4?(i-4)*6:0),xx=lx+(LW-w)/2;box(ctx,xx,y,w,FH+1,i%2?P.me:P.mH,P.ink,P.mH,P.mE);
-    for(let k=3;k<w-4;k+=6){R(ctx,xx+k,y+2,4,5,P.ink);R(ctx,xx+k+1,y+3,2,3,done||i<nF-1?(P.night||done?P.am:P.cy):P.mK)}}
-  if(nF>=FL){const top=GY-3-FL*FH;R(ctx,lx+LW/2-1,top-10,2,10,P.ink);R(ctx,lx+LW/2-5,top-3,10,3,P.mE);R(ctx,lx+LW/2-3,top-13,6,3,done?P.cH:P.cy);
-    if(done){for(let y=top-14;y>=0;y-=2)if(!live||((y+Math.floor(tt*24))>>1)%3)R(ctx,lx+LW/2-1,y,2,1,P.cy);dither(ctx,lx+LW/2-4,top-24,8,10,P.cH,0,3)}}
-  if(placed&&nF<FL&&live)R(ctx,lx+LW/2-5,GY-3-(nF+1)*FH+2,10,1,P.cH);
-  const jx=88;
-  if(a>=.25&&!placed){const u=(a-.25)/.15;block(Math.round(lerp(jx-3,lx+LW/2-5,u)),Math.round(lerp(GY-52,GY-11,u)-Math.sin(u*Math.PI)*16))}
-  if(placed&&nF===0)block(lx+LW/2-5,GY-11);
-  castShadow(lx,LW,20);
-  const tier=0;let pose='idle',fi=idleFi(),dy=0;
-  if(on&&a<.25){pose='carry';fi=live?Math.floor(tt*4)%2:0}
-  else if(a>=.25&&a<.4){pose='jump';const u=(a-.25)/.15;fi=u<.2?0:u<.5?1:u<.8?2:3;dy=-Math.round(Math.sin(u*Math.PI)*8)}
-  else if(done){pose='win';fi=live?Math.floor(tt*3)%3:0}
-  jason(jx,tier,pose,fi,false,{dy,expr:done?'proud':''});
-  if(pose==='carry')block(jx-4,GY-50);
-  const hb=live?[0,-1,-1,0][Math.floor(tt*6)%4]:0;
-  if(done&&live){const an=tt*3;ctx.drawImage(BOT2B[0],jx-5+Math.round(Math.cos(an)*16),GY-62+Math.round(Math.sin(an)*5))}else ctx.drawImage(BOTB[0],jx-15,GY-52+hb);
+/* --- data synthesis: the factory line --- */
+function stageFactory(a,sc){const t=ltime(sc,3.1),live=sc.lit&&!reduced;labWall();
+  // authors' bench and sign
+  box(ctx,26,GY-24,24,8,P.wd,P.ink,P.wH,P.wD);R(ctx,28,GY-16,2,16,P.wD);R(ctx,46,GY-16,2,16,P.wD);tag(24,GY-56,'AUTHOR',P.cH,P.ink);
+  const ty=live?Math.floor(t*6)%2:0;rob(0,32,GY-24,0,ty?-1:0);rob(3,44,GY-24,0,ty?0:-1);
+  if(live)sparks(38,GY-30,t,3,P.cH);
+  // belt
+  const by=GY-18,x0=50,x1=150;belt(x0,x1,by,live?t:0);
+  // verifier gate
+  const gx=88;tag(gx-11,GY-62,'CHECK',P.cH,P.ink);box(ctx,gx-9,GY-52,18,8,P.mK,P.ink,P.mH,null);R(ctx,gx-7,GY-44,2,14,P.mK);R(ctx,gx+5,GY-44,2,14,P.mK);
+  // reviewer with a magnifier
+  tag(108,GY-56,'REVIEW',P.cH,P.ink);
+  // ship crate
+  box(ctx,146,GY-12,13,12,P.wd,P.ink,P.wH,P.wD);txt3(ctx,'OK',148,GY-9,P.am);
+  // items
+  const N=6,T=9,KIND=[1,1,0,1,2,1,0,1];let press=0,grab=0;
+  for(let i=0;i<N;i++){const u=frac(t/T+i/N),lap=Math.floor(t/T+i/N);const kind=KIND[(i*3+lap)%8];const x=Math.round(lerp(x0+4,x1+2,u));let y=by-8,vis=true;
+    const past=x>gx+3;if(Math.abs(x-gx)<=3)press=1;
+    if(kind===0&&x>gx+6){const d=x-gx-6;y+=Math.round(d*d*.3);if(y>VH)vis=false}
+    if(kind===2&&x>118){grab=1;const d=x-118;y-=d*3;if(d>8||(live&&Math.floor(t*20)%2))vis=false}
+    if(x>146&&kind===1)vis=false;
+    if(!vis)continue;
+    const col=!past?P.cy:kind===0?RED():GRN();R(ctx,x-5,y,10,8,P.ink);R(ctx,x-4,y+1,8,6,col);R(ctx,x-4,y+1,8,1,mix(col,'#ffffff',.4));
+    if(past&&kind!==0)tick(x-2,y+2,P.ink);if(past&&kind===0)xmark(x-2,y+2,P.ink);
+    if(kind===2&&past){R(ctx,x+3,y-1,1,1,P.am);R(ctx,x+4,y-2,1,1,'#ffffff');R(ctx,x+2,y-2,1,1,P.am)}}
+  // stamp arm
+  const ay=press?GY-38:GY-44;R(ctx,gx-4,GY-44,8,ay-GY+44,P.mE);R(ctx,gx-6,ay,12,4,P.mK);R(ctx,gx-6,ay,12,1,P.mH);R(ctx,gx-5,ay+4,10,1,press?GRN():P.ink);
+  rob(2,118,by,1,live?bobv(t,2):0);
+  // magnifier in the reviewer's hand
+  const mx=110,my=by-16+(grab?-3:0);for(const [dx,dy] of [[-1,-3],[0,-3],[1,-3],[-2,-2],[2,-2],[-3,-1],[3,-1],[-3,0],[3,0],[-3,1],[3,1],[-2,2],[2,2],[-1,3],[0,3],[1,3]])R(ctx,mx+dx,my+dy,1,1,P.ink);R(ctx,mx-2,my-1,5,3,grab?P.cH:P.night?'#3a3d78':'#dff2f5');R(ctx,mx-1,my-2,3,5,grab?P.cH:P.night?'#3a3d78':'#dff2f5');R(ctx,mx-1,my-1,1,1,'#ffffff');R(ctx,mx+3,my+3,3,1,P.ink);R(ctx,mx+4,my+4,2,1,P.ink);
+  if(grab)txt3(ctx,'!',126,by-26,RED());
+  // Jason supervises from the left
+  jason(12,0,'idle',idleFi(),false,{expr:'focus'});compBot(2,GY-57,live,t);
+}
 
-  if(done&&live)fireworks(sc.fx,dt,12,150,8,34)}
-const STAGES=[stage1,stage2,stage3,stage4];
+/* --- recursive self-improvement: the loop, and the curve that keeps going --- */
+function stageLoop(a,sc){const t=ltime(sc,13.5),live=sc.lit&&!reduced;labWall();
+  // wall monitor with the progress curve
+  const mx=6,my=3,mw=56,mh=31;panel(mx,my,mw,mh,'ROUND');
+  const T=16,cyc=frac(t/T);const cx0=mx+4,cy0=my+mh-4,cw=mw-8,chh=mh-14;
+  const curve=u=>{const peak=.62;return u<peak?Math.pow(u/peak,.55):1-(u-peak)/(1-peak)*.55};
+  R(ctx,cx0,cy0,cw,1,P.mE);R(ctx,cx0,cy0-chh,1,chh,P.mE);
+  const prog=clamp(cyc/.88,0,1);let lastX=cx0,lastY=cy0;
+  for(let i=0;i<=cw;i++){const u=i/cw;if(u>prog)break;const y=Math.round(cy0-curve(u)*chh);const x=cx0+i;R(ctx,x,y,1,1,u<.62?P.cy:RED());lastX=x;lastY=y}
+  if(prog>0){R(ctx,lastX-1,lastY-1,3,3,'#ffffff')}
+  const over=prog>.62;if(over&&(!live||Math.floor(t*3)%2))txt3(ctx,'STOP?',mx+mw-23,my+10,RED());
+  R(ctx,mx+mw/2-1,my+mh,2,4,P.mK);
+  // the ring on the floor with three stations
+  const cx=104,cy=GY-6,rx=40,ry=8;
+  for(let yy=-ry-2;yy<=ry+2;yy++){const hw=Math.round((rx+3)*Math.sqrt(Math.max(0,1-(yy*yy)/((ry+2)*(ry+2)))));R(ctx,cx-hw,cy+yy,hw*2,1,yy>ry-1?P.mK:P.me)}
+  for(let k=0;k<96;k++){const an=k/96*Math.PI*2;const run=live&&((k+Math.floor(t*24))%12<4);R(ctx,Math.round(cx+Math.cos(an)*rx),Math.round(cy+Math.sin(an)*ry),1,1,run?P.cH:P.cy)}
+  const ST=[['DATA',cx-rx-2,-1],['TRAIN',cx,-1],['EVAL',cx+rx+2,1]];
+  ST.forEach(([lab,sx,side],i)=>{const on=i<Math.floor(cyc*3*4)%3+1||cyc>.25;R(ctx,sx-1,GY-30,2,30-ry-8,P.mK);box(ctx,sx-12,GY-44,24,14,P.night?'#0c1f22':'#1d3135',P.ink,null,null);txt3(ctx,lab,sx-Math.floor(txt3w(lab)/2),GY-40,on?P.cH:P.cY);
+    if(live&&Math.floor(t*2)%3===i)R(ctx,sx-12,GY-45,24,1,P.cy)});
+  // robots run the loop; a short lesson hops from one to the next
+  const N=4,list=[];for(let i=0;i<N;i++){const an=(live?t*.9:1.2)+i/N*Math.PI*2;list.push([cx+Math.cos(an)*rx,cy+Math.sin(an)*ry,i,-Math.sin(an)>0?1:0])}
+  const draw=([x,y,i,dir])=>{rob(i,x,y,dir,live?bobv(t,i):0)};
+  list.filter(r=>r[1]<cy).forEach(draw);
+  if(live||reduced){const hop=frac(t/1.6),from=Math.floor(t/1.6)%N,to=(from+1)%N;const A=list[from],B=list[to];const nx=lerp(A[0],B[0],hop),ny=lerp(A[1],B[1],hop)-14-Math.sin(hop*Math.PI)*10;R(ctx,Math.round(nx)-1,Math.round(ny)-1,4,4,P.ink);R(ctx,Math.round(nx),Math.round(ny),2,2,P.am)}
+  list.filter(r=>r[1]>=cy).forEach(draw);
+  // Jason reads the chart, gets worried past the peak
+  jason(32,0,over?'scan':'idle',over?1:idleFi(),true,{expr:over?'det':'focus'});compBot(40,GY-58,live,t);
+}
+
+/* --- 3D asset repair: fix the mesh, don't delete it --- */
+function stageMesh(a,sc){const T=15,t=ltime(sc,T*.95),live=sc.lit&&!reduced,p=frac(t/T);labWall();
+  // big viewport on the wall
+  const vx=4,vy=4,vw=100,vh=76;panel(vx,vy,vw,vh,'MESH REPAIR');
+  const bg=P.night?'#0d1526':'#1a2635';for(let x=vx+4;x<vx+vw-2;x+=8)R(ctx,x,vy+9,1,vh-11,P.night?'#16203a':'#243447');for(let y=vy+12;y<vy+vh-2;y+=8)R(ctx,vx+1,y,vw-2,1,P.night?'#16203a':'#243447');
+  // right panel: checks
+  const px=108,py=4,pw=48;panel(px,py,pw,76,'CHECKS');
+  const CK=['MANIFOLD','UV','PIVOT','GODOT'];
+  const fixHole=p>.2,fixFlip=p>.32,fixPiv=p>.44,cheatIn=p>.44&&p<.68,del=p>.52&&p<.62,checks=p>.68?Math.min(4,Math.floor((p-.68)/.055)):0,pass=p>.9;
+  CK.forEach((s,i)=>{const y=py+13+i*9;txt3(ctx,s,px+4,y,i<checks?P.cH:P.mH);const ok=i<checks;if(ok)tick(px+pw-10,y,GRN());else R(ctx,px+pw-9,y+1,3,3,P.mK)});
+  txt3(ctx,'SHAPE',px+4,py+50,del?RED():P.mH);R(ctx,px+4,py+56,pw-8,4,P.mK);const hd=del?1:fixHole?.12:.3;R(ctx,px+5,py+57,Math.round((pw-10)*hd),2,del?RED():P.cy);R(ctx,px+4+Math.round((pw-8)*.5),py+55,1,6,P.am);
+  if(del&&(!live||Math.floor(t*6)%2))stamp(px+10,py+64,'FAIL',RED());else if(pass)stamp(px+10,py+64,'PASS',GRN());
+  // the mesh (isometric block), or its ghost while deleted
+  const cx=vx+58,cy=vy+34;const top=[[cx,cy-8],[cx+14,cy],[cx,cy+8],[cx-14,cy]];
+  const fillTop=(col)=>{for(let y=-8;y<=8;y++){const hw=Math.round(14*(1-Math.abs(y)/8));R(ctx,cx-hw,cy+y,hw*2+1,1,col)}};
+  const side=(dir,col,h)=>{for(let x=0;x<=14;x++){const yy=cy+Math.round((14-x)*8/14);R(ctx,dir<0?cx-x:cx+x,yy,1,h,col)}};
+  if(del){for(let y=-8;y<=8;y+=2){const hw=Math.round(14*(1-Math.abs(y)/8));R(ctx,cx-hw,cy+y,1,1,RED());R(ctx,cx+hw,cy+y,1,1,RED())}for(let x=0;x<=14;x+=2){R(ctx,cx-x,cy+Math.round((14-x)*8/14)+16,1,1,RED());R(ctx,cx+x,cy+Math.round((14-x)*8/14)+16,1,1,RED())}txt3(ctx,'DELETED',cx-13,cy+2,RED())}
+  else{side(-1,P.cY,16);side(1,mix(P.cY,P.ink,.35),16);fillTop(P.cy);for(let y=-8;y<=8;y++){const hw=Math.round(14*(1-Math.abs(y)/8));R(ctx,cx-hw,cy+y,1,1,P.ink);R(ctx,cx+hw,cy+y,1,1,P.ink)}R(ctx,cx,cy,1,16,P.ink);R(ctx,cx-14,cy,1,16,P.ink);R(ctx,cx+14,cy,1,16,P.ink);
+    // wire highlights
+    R(ctx,cx-6,cy-3,12,1,P.cH);
+    // defect: hole in the right face
+    if(!fixHole){R(ctx,cx+4,cy+6,6,6,bg);const bl=!live||Math.floor(t*4)%2;for(let i=0;i<6;i++){R(ctx,cx+4+i,cy+6,1,1,bl?RED():P.ink);R(ctx,cx+4+i,cy+11,1,1,bl?RED():P.ink);R(ctx,cx+4,cy+6+i,1,1,bl?RED():P.ink);R(ctx,cx+9,cy+6+i,1,1,bl?RED():P.ink)}}
+    // defect: flipped face on top
+    if(!fixFlip){for(let y=-6;y<0;y++){const hw=Math.round(14*(1-Math.abs(y)/8));R(ctx,cx-hw+2,cy+y,hw-2,1,(y%2)?P.pk:mix(P.pk,P.ink,.4))}}
+    // defect: pivot off the mesh
+    const pvx=fixPiv?cx:cx+22,pvy=fixPiv?cy+16:cy+22;R(ctx,pvx-3,pvy,7,1,fixPiv?P.am:RED());R(ctx,pvx,pvy-3,1,7,fixPiv?P.am:RED());R(ctx,pvx,pvy,1,1,'#ffffff');}
+  // repair bot with a wrench
+  let bx=cx+30,byy=cy-18,work=0;
+  if(p>.08&&p<.2){bx=cx+12;byy=cy+2;work=1}else if(p>=.2&&p<.32){bx=cx-2;byy=cy-16;work=1}else if(p>=.32&&p<.44){bx=cx+22;byy=cy+12;work=1}else if(p>=.44&&p<.68){bx=cx-34;byy=cy-22}
+  const bob=live?Math.round(Math.sin(t*5)*1.5):0;ctx.drawImage(BOTB[work?1:0],Math.round(bx)-5,Math.round(byy)-5+bob);
+  R(ctx,bx+5,byy-1+bob,3,1,P.mH);R(ctx,bx+7,byy-2+bob,2,3,P.mH);if(work&&live)sparks(bx+8,byy+bob,t,4,P.am);
+  // the cheater: a pink bot with a DEL key
+  if(cheatIn){const u=p<.52?(p-.44)/.08:p>.62?(p-.62)/.06:0;const sx=p<.52?lerp(vx+vw+10,cx+34,u):p>.62?lerp(cx+34,vx+vw+14,u):cx+34;const sy=cy+6+(live?Math.round(Math.sin(t*9)*(p>.62?2:1)):0);
+    rob(4,sx,sy,1,0);R(ctx,sx-14,sy-14,11,8,P.ink);R(ctx,sx-13,sy-13,9,6,del?RED():P.pa);txt3(ctx,'DEL',sx-13,sy-12,del?'#ffffff':P.ink);if(p>.62)txt3(ctx,'!',sx+6,sy-20,RED())}
+  if(pass&&live)sparks(cx,cy-12,t,6,P.cH);
+  // Jason checks the screen
+  jason(20,0,'idle',idleFi(),false,{expr:del?'det':pass?'proud':'focus'});compBot(6,GY-58,live,t);
+}
+
+/* --- level reconstruction: looks beatable, isn't --- */
+function stageLevel(a,sc){const T=16,t=ltime(sc,T*.9),live=sc.lit&&!reduced,p=frac(t/T);labWall();
+  // cork board with screenshots
+  box(ctx,4,6,42,40,P.night?'#3b2a3d':'#c99a6b',P.ink,P.night?'#4d3a4f':'#dfb688',P.night?'#2a1d2c':'#a97b4f');
+  const pol=(x,y,k)=>{R(ctx,x,y,14,16,P.ink);R(ctx,x+1,y+1,12,14,P.pa);R(ctx,x+2,y+2,10,9,P.night?'#1b2050':P.sky[2]);R(ctx,x+2,y+8,10,3,P.night?'#2a2e68':P.g2);R(ctx,x+3+k*2,y+6-k,4,1,P.cy);R(ctx,x+8,y+4,2,1,P.cy);R(ctx,x+10,y+3,1,2,P.co);R(ctx,x+6,y,2,1,P.co)};
+  pol(8,10,0);pol(24,12,1);pol(16,27,2);
+  // scoreboard
+  panel(106,6,50,26,'REWARD');const layoutOn=p>.3,playFail=p>.5&&p<.58,playOk=p>.88;
+  txt3(ctx,'LAYOUT',110,19,layoutOn?P.cH:P.mH);if(layoutOn)tick(146,19,GRN());else R(ctx,147,20,3,3,P.mK);
+  txt3(ctx,'PLAY',110,26,playOk?P.cH:playFail?RED():P.mH);if(playOk)tick(146,26,GRN());else if(playFail)xmark(147,26,RED());else R(ctx,147,27,3,3,P.mK);
+  // the level: slabs, spawn pad, goal flag
+  const dropFix=p>.58?Math.min(5,Math.floor((p-.58)/.04*5+.001)*1):0;const fixing=p>.58&&p<.62;
+  const PL=[[56,GY-4,16],[80,GY-16,16],[104,GY-26,14],[126,GY-38+dropFix,14],[144,GY-40+dropFix,12]];
+  const nShow=p<.1?0:p<.3?Math.min(5,Math.floor((p-.1)/.04)):5;
+  const slab=(x,y,w)=>{R(ctx,x,y,w,1,P.ink);R(ctx,x+1,y+1,w-2,3,P.night?'#4a5aa0':'#8fb5c8');R(ctx,x+1,y+1,w-2,1,P.night?'#7d8ad0':'#cfe6ee');R(ctx,x,y+1,1,4,P.ink);R(ctx,x+w-1,y+1,1,4,P.ink);R(ctx,x,y+4,w,1,P.ink);R(ctx,x+2,y+5,w-3,2,P.night?'#20265a':'#5d7f93');R(ctx,x+1,y+7,w-1,1,P.ink)};
+  PL.forEach(([x,y,w],i)=>{if(i<nShow){slab(x,y,w);if(live&&p<.3&&i===nShow-1)sparks(x+w/2,y,t,3,P.mH)}});
+  if(nShow>=5){const fx=PL[4][0]+PL[4][2]-3,fy=PL[4][1]-10;R(ctx,fx,fy,1,10,P.ink);const wave=playOk&&live?Math.floor(t*6)%2:0;R(ctx,fx+1,fy,5-wave,3,playOk?GRN():P.co)}
+  if(nShow>=1){txt3(ctx,'SPAWN',52,GY-12,P.mH)}
+  if(fixing&&live)sparks(133,GY-36,t,4,P.am);
+  // navmesh bot plays it
+  const run=(u,fail)=>{ // route as segments with durations
+    const segs=[[56,GY-4,70,GY-4,'r',.1],[70,GY-4,84,GY-16,'j',.12],[84,GY-16,94,GY-16,'r',.08],[94,GY-16,108,GY-26,'j',.12],[108,GY-26,116,GY-26,'r',.08],
+      fail?[116,GY-26,126,GY-29,'j',.12]:[116,GY-26,130,GY-38,'j',.12],fail?[126,GY-29,126,GY+30,'f',.2]:[130,GY-38,138,GY-38,'r',.06],fail?null:[138,GY-38,148,GY-40,'j',.1],fail?null:[148,GY-40,150,GY-40,'r',.2]].filter(Boolean);
+    let acc=0;for(const s of segs){if(u<acc+s[5]){const k=(u-acc)/s[5];const x=lerp(s[0],s[2],k);let y=lerp(s[1],s[3],k);if(s[4]==='j')y-=Math.sin(k*Math.PI)*14;if(s[4]==='f')y=s[1]+k*k*60;return[x,y,s[4]]}acc+=s[5]}return null};
+  let pos=null;if(p>.3&&p<.5)pos=run((p-.3)/.2*0.8,true);else if(p>.62&&p<.88)pos=run((p-.62)/.26,false);else if(p>=.88)pos=[150,GY-40,'r'];
+  if(pos&&pos[1]<VH){const [x,y,k]=pos;ctx.drawImage(BOTB[k==='f'?1:0],Math.round(x)-5,Math.round(y)-10);if(k==='f'){txt3(ctx,'!',Math.round(x)+6,Math.round(y)-16,RED())}if(k==='j'&&live)R(ctx,Math.round(x)-1,Math.round(y)+1,2,1,P.cH)}
+  if(playFail&&(!live||Math.floor(t*4)%2))txt3(ctx,'UNBEATABLE',88,GY-54,RED());
+  if(playOk)stamp(100,GY-58,'BEATEN',GRN());
+  // Jason by the board
+  jason(26,0,'idle',idleFi(),false,{expr:playFail?'det':playOk?'proud':'focus'});compBot(50,GY-62,live,t);
+}
+
+/* --- agentic game dev: looks right, doesn't play right --- */
+function stageGamedev(a,sc){const T=13,t=ltime(sc,T*.8),live=sc.lit&&!reduced,p=frac(t/T);labWall();
+  // the coding bot at its desk
+  box(ctx,4,GY-22,40,6,P.wd,P.ink,P.wH,P.wD);R(ctx,6,GY-16,2,16,P.wD);R(ctx,40,GY-16,2,16,P.wD);
+  box(ctx,10,GY-44,26,22,P.mK,P.ink,P.mE,null);R(ctx,12,GY-42,22,18,P.night?'#0e2a2a':'#1f3d3b');R(ctx,22,GY-22,2,3,P.mK);
+  const typing=p<.15||p>.9;for(let i=0;i<5;i++){const l=4+((i*7+(live&&typing?Math.floor(t*6):2))%14);R(ctx,14,GY-40+i*3,Math.min(18,l),1,i%2?P.cy:P.am)}
+  R(ctx,13,GY-57,20,13,P.ink);R(ctx,14,GY-56,18,11,P.pa);txt3(ctx,'SPEC',16,GY-54,P.ink);R(ctx,16,GY-48,10,1,P.pl);R(ctx,16,GY-46,13,1,P.pl);
+  rob(1,30,GY-22,1,live&&typing?[0,-1][Math.floor(t*8)%2]:0);
+  if(p>.72&&p<.9)txt3(ctx,'!',36,GY-42,RED());
+  // scorecard
+  panel(86,60,72,22,null);const S=[['MECH',0,89],['DEPTH',1,107],['VIS',2,129],['ART',3,145]];
+  const visOk=p>.3,artOk=p>.36,depHalf=p>.46,mechFail=p>.72;
+  S.forEach(([s,i,x])=>{txt3(ctx,s,x,64,P.mH);const y=72;if(i===2&&visOk||i===3&&artOk)tick(x+2,y,GRN());else if(i===1&&depHalf)R(ctx,x+2,y+1,4,3,YEL());else if(i===0&&mechFail)xmark(x+3,y,RED());else R(ctx,x+3,y+1,3,3,P.mK)});
+  // the game window
+  const open=p>.15&&p<.95;const wx=86,wy=8,ww=70,wh=48;
+  if(open){const u=p<.22?(p-.15)/.07:p>.9?1-(p-.9)/.05:1;const sh=mechFail&&p<.8&&live?Math.round(Math.sin(t*40)*1.5):0;const w=Math.max(8,Math.round(ww*u)),h=Math.max(6,Math.round(wh*u));const x=wx+sh+Math.round((ww-w)/2),y=wy+Math.round((wh-h)/2);
+    panel(x,y,w,h,u>.8?'GAME':null);
+    if(u>.8){const ix=x+1,iy=y+8,iw=w-2,ih=h-9;R(ctx,ix,iy,iw,ih,P.night?'#1b2050':P.sky[1]);R(ctx,ix,iy+ih*.4,iw,ih*.6,P.night?'#232a6a':P.sky[3]);disc(ix+iw-9,iy+6,2,P.lum,P.lumR,P.night);
+      for(let k=0;k<iw;k++){const hh=Math.round(4+Math.sin(k*.4)*2+Math.sin(k*.13)*3);R(ctx,ix+k,iy+ih-8-hh,1,hh,P.night?'#2e3a78':'#8fb27a')}
+      R(ctx,ix,iy+ih-8,iw,8,P.night?'#3a2d4a':'#6b9b55');R(ctx,ix,iy+ih-8,iw,1,P.night?'#55487a':'#9ccf7f');
+      // castle
+      const cxx=ix+8;R(ctx,cxx,iy+ih-24,14,16,P.night?'#6a6e9a':'#c8c2b6');for(let k=0;k<4;k++)R(ctx,cxx+k*4,iy+ih-26,2,2,P.night?'#6a6e9a':'#c8c2b6');R(ctx,cxx+5,iy+ih-14,4,6,P.ink);R(ctx,cxx+3,iy+ih-22,2,2,P.ink);R(ctx,cxx+9,iy+ih-22,2,2,P.ink);
+      // the wall the hero should collide with
+      const wallX=ix+40;R(ctx,wallX,iy+ih-18,5,10,P.night?'#8a5a6a':'#a8705a');R(ctx,wallX,iy+ih-18,5,1,P.night?'#b07a8a':'#d6977c');for(let k=0;k<4;k++)R(ctx,wallX+(k%2)*2,iy+ih-16+k*2,1,1,P.ink);
+      // gem
+      R(ctx,ix+iw-10,iy+ih-14,3,4,P.cH);R(ctx,ix+iw-9,iy+ih-13,1,2,'#ffffff');
+      // hero walks into the wall and keeps going
+      let hx=ix+24;if(p>.5){const k=clamp((p-.5)/.25,0,1);hx=ix+24+k*30}const hy=iy+ih-14;
+      R(ctx,Math.round(hx),hy,4,6,P.co);R(ctx,Math.round(hx)+1,hy-1,2,2,'#f3cdae');R(ctx,Math.round(hx)+(live&&p>.5&&p<.75?Math.floor(t*8)%2:0),hy+6,2,1,P.ink);
+      if(mechFail&&(!live||Math.floor(t*4)%2))txt3(ctx,'NO HIT',wallX-8,iy+ih-26,RED());
+      // test cursor
+      let cx_=0,cy_=0,show=false;if(p>.22&&p<.36){show=true;cx_=ix+iw-16;cy_=iy+10}else if(p>.4&&p<.5){show=true;cx_=cxx+8;cy_=iy+ih-12}else if(p>=.5&&p<.75){show=true;cx_=wallX+6;cy_=iy+ih-10}
+      if(show){const click=live&&Math.floor(t*3)%3===0;const ox=click?1:0;R(ctx,cx_+ox,cy_+ox,1,6,'#ffffff');R(ctx,cx_+1+ox,cy_+1+ox,1,4,'#ffffff');R(ctx,cx_+2+ox,cy_+2+ox,1,2,'#ffffff');R(ctx,cx_+3+ox,cy_+3+ox,1,1,'#ffffff');R(ctx,cx_+ox,cy_+ox,4,1,P.ink);R(ctx,cx_+ox,cy_+ox,1,7,P.ink)}
+      if(p>.28&&p<.31&&live)R(ctx,ix,iy,iw,ih,'rgba(255,255,255,.5)');
+      if(p>.4&&p<.46)txt3(ctx,'OPEN?',cxx+10,iy+ih-30,YEL());}}
+  // Jason, pointing at the window
+  jason(66,0,'idle',idleFi(),false,{expr:mechFail?'det':'focus'});compBot(52,GY-58,live,t);
+}
+const STAGES={line:stageLine,factory:stageFactory,loop:stageLoop,mesh:stageMesh,level:stageLevel,gamedev:stageGamedev,chat:stage2,reading:stage1};
 
 /* ================= LIGHT-UP COMPOSITING ================= */
 const MONO={day:['#4a4560','#8a85a0','#c3bfd0','#ece9f1'],night:['#0b0b22','#20214a','#373a6e','#5d5f98']};
@@ -835,8 +1178,9 @@ function monoize(id,fromX){const d=id.data,w=id.width,h=id.height,pal=(isNight()
 
 /* ================= STATE ================= */
 const D_=D,heroEl=D.querySelector('.hero'),hcv=$('sky'),hctx=hcv.getContext('2d');
-const SC=[...D.querySelectorAll('#run > li')].map((li,k)=>{const c=li.querySelector('.dio canvas');c.width=SW;c.height=SH;const b=D.createElement('canvas');b.width=SW;b.height=SH;const bx=b.getContext('2d',{willReadFrequently:true});bx.imageSmoothingEnabled=false;const x=c.getContext('2d');x.imageSmoothingEnabled=false;
-  return{k,li,fig:li.querySelector('.dio'),c,x,b,bx,lit:false,litAt:0,done:false,vis:false,dirty:true,fx:[],}});
+const QS=new URLSearchParams(location.search),FORCE_LIT=QS.has('lit'),T_OFF=parseFloat(QS.get('t')||'0')||0;
+const SC=[...D.querySelectorAll('figure.dio[data-stage]')].map((fig,k)=>{const c=fig.querySelector('canvas');const w=+fig.dataset.w||SW,h=+fig.dataset.h||SH;c.width=w;c.height=h;const b=D.createElement('canvas');b.width=w;b.height=h;const bx=b.getContext('2d',{willReadFrequently:true});bx.imageSmoothingEnabled=false;const x=c.getContext('2d');x.imageSmoothingEnabled=false;
+  return{k,name:fig.dataset.stage,li:fig.closest('.ch,.bfi,.ov')||fig,fig,c,x,b,bx,w,h,max:+fig.dataset.max||4,lit:false,litAt:0,done:false,vis:false,dirty:true,fx:[]}});
 const nDone=()=>SC.filter(s=>s.done).length;
 let heroVis=true,saveVis=false,HS=4,HVW=360,HVH=225,HGY=195,hsky=null,hcity=null,hstars=[],hclouds=[],hfx=[],phone=false;
 
@@ -853,8 +1197,9 @@ function sizeHero(){phone=innerWidth<=760;heroEl.style.minHeight='';
   HB.deck=Math.round(clamp(Math.max(HVH-84,HB.tb+(phone?44:14)),20,HVH-46));HB.hz=HB.deck+18;
   HB.ttop=HB.deck-(phone?36:Math.min(64,HB.deck-30));HB.T=phone?[Math.round(HVW*.12),Math.round(HVW*.88)]:[Math.round(HVW*.13),Math.round(HVW*.87)];
   hcv.width=HVW;hcv.height=HVH;hcv.style.width=HVW*HS+'px';hcv.style.height=HVH*HS+'px';hctx.imageSmoothingEnabled=false;heroPre()}
+function expand(cols,n){const out=[];for(let i=0;i<n;i++){const t=i/(n-1)*(cols.length-1),k=Math.min(cols.length-2,Math.floor(t));out.push(mix(cols[k],cols[k+1],t-k))}return out}
 function heroPre(){const W=HVW,hz=HB.hz;
-  {const [c,x]=mk(W,hz+1);bands(x,P.sky,0,hz+1,W);hsky=c}
+  {const [c,x]=mk(W,hz+1);bands(x,expand(P.sky,14),0,hz+1,W);hsky=c}
   const [c,x]=mk(W,hz+1);const tint=t=>mix(t,P.sky[4],.35);
   const cap=px=>(px>HB.tx0-4&&px<HB.tx1+4)?Math.max(6,hz-HB.tb-6):999;
   const r=rng(7);for(let px=0;px<W;){const w=7+(r()*12|0);let h=Math.min(cap(px)+6,12+(r()*34|0));R(x,px,hz-h,w,h+1,tint(P.f2));for(let wy=hz-h+3;wy<hz-2;wy+=4)for(let wx=px+2;wx<px+w-2;wx+=3)if(r()<(P.night?.2:.05))R(x,wx,wy,1,1,P.fw);px+=w+(r()*3|0)}
@@ -881,7 +1226,7 @@ function tower(cx,ty,by,B){
 function drawHero(dt){ctx=hctx;VW=HVW;VH=HVH;GY=HGY;const live=!reduced,W=VW,B=isNight()?BRC.night:BRC.day,{deck,hz,ttop,T}=HB;
   ctx.drawImage(hsky,0,0);
   if(P.night)for(const [x,y,s,tw] of hstars){if(!live||Math.floor(tt*2+tw)%7)R(ctx,x,y,s,s,s>1?'#ffe9a8':P.star)}
-  const mx=Math.round(W*(phone?.86:.86)),my=Math.round((HB.cl[0]+HB.cl[1])/2)+(phone?0:4);disc(mx,my,phone?5:8,P.lum,P.lumR,P.night);
+  const mx=Math.round(W*(phone?.9:.86)),my=phone?HB.cl[0]-3:Math.round((HB.cl[0]+HB.cl[1])/2)+4;disc(mx,my,phone?5:8,P.lum,P.lumR,P.night);
   for(const [x,y,w,s] of hclouds){const cx=((x+(live?tt*s*2:0))%(W+80))-40;cloud(cx,y,w,0)}
   ctx.drawImage(hcity,0,0);
     // the East River
@@ -915,7 +1260,7 @@ function drawHero(dt){ctx=hctx;VW=HVW;VH=HVH;GY=HGY;const live=!reduced,W=VW,B=i
 
 /* ================= SAVE POINT ================= */
 const sv=$('save'),svx=sv.getContext('2d');let SVS=4,SVW=120;
-function sizeSave(){SVS=phone?2:4;SVW=phone?Math.min(160,Math.floor((innerWidth-32)/SVS)):120;sv.width=SVW;sv.height=72;sv.style.width=SVW*SVS+'px';sv.style.height=72*SVS+'px'}
+function sizeSave(){SVS=phone?2:4;const pw=sv.parentElement.clientWidth||innerWidth-32;SVW=clamp(Math.floor(pw/SVS),120,400);sv.width=SVW;sv.height=72;sv.style.width=SVW*SVS+'px';sv.style.height=72*SVS+'px'}
 function saveScene(){const W=SVW,H=72,x=svx,live=!reduced,t=tt;x.imageSmoothingEnabled=false;const N=ENV.night;
   const cols=N.sky;for(let i=0;i<6;i++){x.fillStyle=cols[i];x.fillRect(0,i*9,W,10)}
   const r=rng(9);for(let i=0;i<30;i++){const sx=r()*W|0,sy=r()*44|0;if(!live||(Math.floor(t*2+i)%7)){x.fillStyle='#fdf6e3';x.fillRect(sx,sy,1,1)}}
@@ -936,53 +1281,53 @@ function renderScene(sc,now,dt){
   let sweep=0,a=0;
   if(sc.lit){const e=now-sc.litAt;sweep=reduced?1:clamp(e/450,0,1);a=reduced?1:clamp((e-500)/2800,0,1);if(a>=.85&&!sc.done)clearStage(sc)}
   else if(!sc.dirty)return;
-  ctx=sc.bx;VW=SW;VH=SH;GY=SGY;const keep=tt;if(!sc.lit)tt=0;
-  STAGES[sc.k](a,sc,dt);tt=keep;
+  ctx=sc.bx;VW=sc.w;VH=sc.h;GY=sc.h-16;const keep=tt;if(!sc.lit)tt=0;
+  STAGES[sc.name](a,sc,dt);tt=keep;
   if(sweep>=1)sc.x.drawImage(sc.b,0,0);
-  else{const id=sc.bx.getImageData(0,0,SW,SH);const fx=Math.round(SW*sweep/4)*4;monoize(id,fx);sc.x.putImageData(id,0,0);if(sweep>0){R(sc.x,fx-1,0,1,SH,P.cH);R(sc.x,fx,0,1,SH,'#ffffff')}}
+  else{const id=sc.bx.getImageData(0,0,sc.w,sc.h);const fx=Math.round(sc.w*sweep/4)*4;monoize(id,fx);sc.x.putImageData(id,0,0);if(sweep>0){R(sc.x,fx-1,0,1,sc.h,P.cH);R(sc.x,fx,0,1,sc.h,'#ffffff')}}
   sc.dirty=false}
 
 /* ================= HUD / TOAST ================= */
 function drawFace(){const c=$('face'),x=c.getContext('2d');x.clearRect(0,0,24,24);x.fillStyle=isNight()?'#262a66':'#cfe6ec';x.fillRect(0,0,24,24);
   const img=renderJason(0,'idle',0,{t:0,still:1,expr:'smile'});x.drawImage(img,4,3,24,24,0,0,24,24)}
 function hud(){drawFace()}
-function drawCameos(){D.querySelectorAll('canvas.cameo').forEach(c=>{const k=c.dataset.cameo;const [w,h]=k==='reader'?[16,12]:[12,14];c.width=w;c.height=h;const x=c.getContext('2d');x.clearRect(0,0,w,h);
+const CAMEO={flag:spr(['o.........','oo........','oww..oooo.','owwwwwwwwo','owwkwwkwwo','owkwwkwwwo','owwkwwkwwo','owwwwwwwwo','oo........','o.........','o.........','o.........']),crate:spr(['..........','.oooooooo.','ohhhhhhhho','ohccccccho','ohcccccgho','ohccccgcho','ohcgccgcho','ohccggccho','ohccccccho','oyyyyyyyyo','.oooooooo.','..........']),paper:spr(['.ooooooo..','.owwwwwoo.','.owwwwwowo','.owwwwwooo','.owkkkwwwo','.owwwwwwwo','.owkkkkkwo','.owwwwwwwo','.owkkkkwwo','.owwwwwwwo','.owkkkkkwo','.oooooooo.']),cap:spr(['..........','....oo....','..oo..oo..','oo......oo','o........o','.oo....oo.','...oooo.o.','...okko.o.','...okko.oo','...okko...','...oooo...','..........'])};function drawCameos(){D.querySelectorAll('canvas.cameo').forEach(c=>{const k=c.dataset.cameo;if(CAMEO[k]){const ink=P.night?'#ece8de':P.ink;const pal={o:ink,w:P.night?'#3a3d78':'#fdf9ef',k:P.night?'#8b8fc4':'#6b6880',c:P.cy,h:P.cH,g:P.cY,y:P.am};c.width=10;c.height=12;const x=c.getContext('2d');x.clearRect(0,0,10,12);x.drawImage(bake(CAMEO[k],pal,0),0,0);c.style.width='40px';c.style.height='48px';return}const [w,h]=k==='reader'?[16,12]:[12,14];c.width=w;c.height=h;const x=c.getContext('2d');x.clearRect(0,0,w,h);
   if(k==='robot')x.drawImage(ROBB[2][0],0,0);if(k==='bot')x.drawImage(BOTB[0],1,2);
   if(k==='reader'){x.fillStyle='#0b0a14';x.fillRect(0,1,16,11);x.fillStyle='#aab5c5';x.fillRect(1,2,14,9);x.fillStyle='#1f3d3b';x.fillRect(6,3,8,5);x.fillStyle='#5ff0d9';x.fillRect(6,5,8,1);x.fillStyle='#fdf9ef';x.fillRect(1,3,4,3);x.fillStyle='#ffd36e';x.fillRect(2,9,2,1)}
-  c.style.width=w*3+'px';c.style.height=h*3+'px'})}
+  const S=c.closest('.feat')?5:3;c.style.width=w*S+'px';c.style.height=h*S+'px'})}
 function toggleIcon(){const c=$('tglc'),x=c.getContext('2d');x.clearRect(0,0,12,12);x.drawImage(bake(isNight()?MOON:SUN,{o:isNight()?'#05040f':P.ink,y:isNight()?'#ffd36e':'#e9a12e'},0),0,0)}
 function clearStage(sc){sc.done=true;sc.li.classList.add('lit');kick()}
 function light(sc){if(sc.lit)return;sc.lit=true;sc.litAt=performance.now();if(reduced){clearStage(sc)}kick()}
 
 /* ================= LOOP ================= */
 let last=0,raf=0;
-function loop(now){raf=0;const dt=Math.min(.05,(now-last)/1000||0);last=now;tt=now/1000;
+function loop(now){raf=0;const dt=Math.min(.05,(now-last)/1000||0);last=now;tt=now/1000+T_OFF;
   if(heroVis)drawHero(dt);
   for(const sc of SC)if(sc.vis||sc.dirty)renderScene(sc,now,dt);
   if(saveVis)saveScene();
   if(!reduced)raf=requestAnimationFrame(loop)}
 function kick(){if(!raf)raf=requestAnimationFrame(loop)}
 
-function sizeScenes(){const w=innerWidth;for(const sc of SC){let S;
-  if(w<=760)S=Math.floor((sc.fig.parentElement.clientWidth-8)/SW);else if(w<=1180)S=Math.floor(Math.min(640,sc.li.clientWidth-96-16)/SW);else S=3;
-  S=clamp(S,1,4);sc.c.style.width=SW*S+'px';sc.c.style.height=SH*S+'px';sc.dirty=true}}
+function sizeScenes(){for(const sc of SC){const fw=sc.fig.clientWidth||innerWidth-32;const S=clamp(Math.floor(fw/sc.w),1,sc.max);sc.c.style.width=sc.w*S+'px';sc.c.style.height=sc.h*S+'px';sc.dirty=true}}
 function rebuild(){bakeAll();sizeHero();sizeSave();sizeScenes();hud();drawCameos();toggleIcon();kick()}
 
 /* ================= OBSERVERS & CONTROLS ================= */
-const io=new IntersectionObserver(es=>{for(const e of es){const sc=SC.find(s=>s.fig===e.target);sc.vis=e.isIntersecting;if(e.isIntersecting&&e.intersectionRatio>=.55)light(sc);if(e.isIntersecting)sc.dirty=true}kick()},{threshold:[0,.55,1]});
+const io=new IntersectionObserver(es=>{for(const e of es){const sc=SC.find(s=>s.fig===e.target);if(!sc)continue;sc.vis=e.isIntersecting;if(e.isIntersecting&&e.intersectionRatio>=.55)light(sc);if(e.isIntersecting)sc.dirty=true}kick()},{threshold:[0,.55,1]});
 SC.forEach(sc=>io.observe(sc.fig));
+if(FORCE_LIT)SC.forEach(sc=>{sc.lit=true;sc.litAt=performance.now()-6000;clearStage(sc);sc.vis=true});
 new IntersectionObserver(es=>{heroVis=es[0].isIntersecting;kick()}).observe(heroEl);
 new IntersectionObserver(es=>{saveVis=es[0].isIntersecting;kick()}).observe(sv);
 $('tgl').addEventListener('click',()=>{const nx=isNight()?'light':'dark';root.dataset.theme=nx;try{localStorage.setItem('jl-theme',nx)}catch(e){}JC.clear();rebuild()});
 const onScheme=()=>{if(!root.dataset.theme)rebuild()};if(mqD.addEventListener)mqD.addEventListener('change',onScheme);
 if(RMq.addEventListener)RMq.addEventListener('change',()=>{SC.forEach(sc=>{if(sc.lit&&!sc.done)clearStage(sc);sc.dirty=true});kick()});
-$('copy').addEventListener('click',async()=>{const em=$('email').textContent.trim(),msg=$('copied');
+D.querySelectorAll('.cp').forEach(btn=>btn.addEventListener('click',async()=>{const em=btn.dataset.copy,msg=btn.parentElement.querySelector('[data-copied]');
   try{await navigator.clipboard.writeText(em);msg.textContent='Copied!'}catch(e){const r=D.createRange();r.selectNodeContents($('email'));const s=getSelection();s.removeAllRanges();s.addRange(r);msg.textContent='Selected, press Ctrl/Cmd+C'}
-  setTimeout(()=>{msg.textContent=''},2600)});
+  setTimeout(()=>{msg.textContent=''},2600)}));
+const bar=$('topbar');let scr=-1;const onScroll=()=>{const s=scrollY>24;if(s!==scr){scr=s;bar.classList.toggle('scrolled',s)}};addEventListener('scroll',onScroll,{passive:true});onScroll();
 let rt=0;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{sizeHero();sizeSave();sizeScenes();kick()},120)});
 if(window.ResizeObserver)new ResizeObserver(()=>{clearTimeout(rt);rt=setTimeout(()=>{sizeHero();kick()},60)}).observe(heroEl);
 rebuild();
-if(D.fonts&&D.fonts.ready)D.fonts.ready.then(()=>{sizeScenes();kick()});
+if(D.fonts&&D.fonts.ready)D.fonts.ready.then(()=>{sizeHero();sizeSave();sizeScenes();kick()});
 })();
 </script>
 </body>
